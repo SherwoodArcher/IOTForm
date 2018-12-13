@@ -92,7 +92,7 @@ function listarClientes(clientes) {
                     '</div>'+
                     '<div class="column is-2">'+
                         '<button type="button" class="button btnTrans btnBorder btnFull btnCliente" data-cliente="'+element.Id+'">'+
-                            'Logar Como Cliente&nbsp; <i class="fas fa-chevron-right"></i>'+
+                            'Visualizar&nbsp; <i class="fas fa-chevron-right"></i>'+
                         '</button>'+
                     '</div>';
         $("#listaClientes").append(html);

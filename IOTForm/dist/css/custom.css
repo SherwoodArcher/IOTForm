@@ -321,3 +321,8 @@
         background-color: transparent;
         color: black !important;
      }
+
+     #listaClientes{
+         overflow-y: scroll;
+         max-height: 50vh;
+     }
