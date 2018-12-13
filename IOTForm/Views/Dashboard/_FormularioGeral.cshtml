@@ -275,14 +275,4 @@
             enviarFormularioGeral();
         });
     });
-
-    function enviarFormularioGeral() {
-        var QuestionarioRespostas = {};
-        for (var a = 1; a < 11; a++) {
-            QuestionarioRespostas['Resposta' + a] = $("#resposta" + a).prop("checked") ? 1 : 0;
-            QuestionarioRespostas['RespostaTexto' + a] = $("#respostatexto" + a).text();
-        }
-        sendContent("/questionario", QuestionarioRespostas,"Sucesso", "Formulário Geral Gravado Com Sucesso!")
-    }
-
 </script>

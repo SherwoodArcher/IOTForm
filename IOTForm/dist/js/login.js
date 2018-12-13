@@ -4,24 +4,21 @@
     })
 
     $("#formLogin").submit(function () {
-        var login = $("#login").val();
+        setCookie("admin",0);
+        voltarAdmin();
+        /* var login = $("#login").val();
         var senha = $("#senha").val();
         $.ajax({
-            url: "https://iotforms-api.azurewebsites.net/",
-            data: { login: login, senha: senha },
-            method: 'post',
-            contentType: "application/json",
+            url: "https://iotforms-api.azurewebsites.net/login",
+            data: { email: login, senha: senha },
+            method: 'POST',
             success: function (result) {
-                if (result.code) {
-                    var cookiename = result.clienteid == 0 ? "clienteid" : "admin" ;
-                    setCookie(cookiename,result.clienteid);
-                } else {
-                    $("#erro").show();
-                }
+                var cookiename = result.IdCliente == 0 ? "clienteid" : "admin" ;
+                setCookie(cookiename,result.clienteid);
             },
             error: function (error) {
                 $("#erro").show();
-            }
+            } */
         });
     })
 });
