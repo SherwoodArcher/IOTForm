@@ -1,0 +1,216 @@
+﻿
+<div style="position: relative; height:100%;">
+    <button type="button" class="button btnTrans btnBorder btnVoltar" id="voltarProjeto">
+        <i class="fas fa-arrow-left"></i>&nbsp; Voltar
+    </button>
+    <div class="columns is-multiline is-desktop is-mobile paddingLR">
+        <div class="column is-8 is-offset-2 has-text-centered">
+            <h3 class="title is-3">Track & Trace - Serviços de Backend</h3>
+        </div>
+    </div>
+    <form id="AmbienteProjeto">
+        <div class="wrapper" id="part1">
+            <div class="columns is-multiline is-desktop is-mobile m10px">
+                <div class="column is-8 is-offset-2 has-text-centered">
+                    <h5 class="title is-5">I. Geral</h5>
+                </div>
+            </div>
+            <div class="wrapper-body paddingLR" id="geralAtivosDevices">
+                <div class="columns is-multiline is-desktop is-mobile">
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">1. Estratégia da Aplicação</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="geralEstrategiaAplicacao">
+                            <option value="1">Nenhuma nova lógica na aplicação</option>
+                            <option value="2">Incorporar nova lógica de negócios em aplicativos principais já existentes (por exemplo, ERP)</option>
+                            <option value="3">Aplicativo pequeno, novo e autocontido</option>
+                            <option value="4">Novo aplicativo principal (por exemplo, aplicação significativa com propriedade de dados e processos chave)</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="geralEstrategiaAplicacaoC" id="geralEstrategiaAplicacaoC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">2. Complexidade do negócio</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="geralComplexidadeNegocio">
+                            <option value="1">Atualizações regulares de 3-5 leituras de dispositivos remotos no ERP, apenas monitoramento remoto</option>
+                            <option value="2">Mais atualizações regulares, algumas funções de alarme</option>
+                            <option value="3">Um novo processo fim-a-fim principal, e.g. comissionamento de produto</option>
+                            <option value="4">> 5 novos processos principais fim-a-fim, e.g. comissionamento, customer service, retenção de clientes, up-selling, etc.</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="geralComplexidadeNegocioC" id="geralComplexidadeNegocioC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">3. Integração do backend</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="geralIntegracaoBackend">
+                            <option value="1">Muito simples, e.g. lote, formulários em papel (integração manual)</option>
+                            <option value="2">EAI básico</option>
+                            <option value="3">SOA com 2-3 serviços de orquestração complexos</option>
+                            <option value="4">SOA ou EAI com >20 orquestrações</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="geralIntegracaoBackendC" id="geralIntegracaoBackendC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="button btnTrans btnBorder is-pulled-right proximo part2btn">
+                Próximo &nbsp;<i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="wrapper" id="part2" style="display:none;">
+            <div class="columns is-multiline is-desktop is-mobile m10px">
+                <div class="column is-8 is-offset-2 has-text-centered">
+                    <h5 class="title is-5">II. Gestão de Dados e Analytics</h5>
+                </div>
+            </div>
+            <div class="wrapper-body paddingLR" id="geralAtivosDevices">
+                <div class="columns is-multiline is-desktop is-mobile">
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">1. Volume de dados/ingestão por dia</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="gestaoVolumeDados">
+                            <option value="1">< 10 MB/dia</option>
+                            <option value="2">< 10 GB/dia</option>
+                            <option value="3">< 1 TB/dia</option>
+                            <option value="4">> 1 TB/dia</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="gestaoVolumeDadosC" id="gestaoVolumeDadosC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">2. Variedade de dados</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="gestaoVariedadeDados">
+                            <option value="1">3 tipos de entidades</option>
+                            <option value="2">< 10 tipos de entidades</option>
+                            <option value="3">< 100 tipos de entidades</option>
+                            <option value="4">> 100 tipos de entidades</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="gestaoVariedadeDadosC" id="gestaoVariedadeDadosC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">3. Variabilidade de dados (mudança de esquema)</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="gestaoVariabilidadeDados">
+                            <option value="1">Modelo de dados estático</option>
+                            <option value="2">2 por ano</option>
+                            <option value="3">< 1 por mês</option>
+                            <option value="4">> 1 por mês></option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="gestaoVariabilidadeDadosC" id="gestaoVariabilidadeDadosC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">4. Analytics</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="gestaoAnalytics">
+                            <option value="1">Sem analytics</option>
+                            <option value="2">Analytics descritivo:  pre-definido, relatórios padrão, navegação simples</option>
+                            <option value="3">Analytics complexo/data mining. Controle de qualidade de dados complexo</option>
+                            <option value="4">Analytics preditivo, analytics de fluxo, CEP, machine learning adaptativo avançado</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="gestaoAnalyticsC" id="gestaoAnalyticsC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="button btnTrans btnBorder anterior part1btn">
+                <i class="fas fa-arrow-left"></i>&nbsp; Anterior
+            </button>
+            <button type="button" class="button btnTrans btnBorder is-pulled-right salvar">
+                <i class="fas fa-check"></i>&nbsp; Salvar
+            </button>
+        </div>
+    </form>
+</div>
+
+<script type="text/javascript">
+    "use strict";
+    $(document).ready(function () {
+        $("#voltarProjeto").off().click(function () {
+            getContent("/Dashboard/Projeto");
+        });
+        $(".part1btn").off().click(function () {
+            $(".wrapper").hide();
+            $("#part1").show();
+        });
+        $(".part2btn").off().click(function () {
+            $(".wrapper").hide();
+            $("#part2").show();
+        });
+        $(".salvar").off().click(function () {
+            enviarServicosBackend();
+        });
+    });
+
+    function enviarServicosBackend() {
+
+        var geralEstrategiaAplicacao = $("#geralEstrategiaAplicacao").val();
+        var geralEstrategiaAplicacaoC = $("#geralEstrategiaAplicacaoC").val();
+        var geralComplexidadeNegocio = $("#geralComplexidadeNegocio").val();
+        var geralComplexidadeNegocioC = $("#geralComplexidadeNegocioC").val();
+        var geralIntegracaoBackend = $("#geralIntegracaoBackend").val();
+        var geralIntegracaoBackendC = $("#geralIntegracaoBackendC").val();
+        var gestaoVolumeDados = $("#gestaoVolumeDados").val();
+        var gestaoVolumeDadosC = $("#gestaoVolumeDadosC").val();
+        var gestaoVariedadeDados = $("#gestaoVariedadeDados").val();
+        var gestaoVariedadeDadosC = $("#gestaoVariedadeDadosC").val();
+        var gestaoVariabilidadeDados = $("#gestaoVariabilidadeDados").val();
+        var gestaoVariabilidadeDadosC = $("#gestaoVariabilidadeDadosC").val();
+        var gestaoAnalytics = $("#gestaoAnalytics").val();
+        var gestaoAnalyticsC = $("#gestaoAnalyticsC").val();
+
+
+        var servicosBackend = {
+            GeralEstrategiaAplicacao: geralEstrategiaAplicacao,
+            GeralEstrategiaAplicacaoC: geralEstrategiaAplicacaoC,
+            GeralComplexidadeNegocio: geralComplexidadeNegocio,
+            GeralComplexidadeNegocioC: geralComplexidadeNegocioC,
+            GeralIntegracaoBackend: geralIntegracaoBackend,
+            GeralIntegracaoBackendC: geralIntegracaoBackendC,
+            GestaoVolumeDados: gestaoVolumeDados,
+            GestaoVolumeDadosC: gestaoVolumeDadosC,
+            GestaoVariedadeDados: gestaoVariedadeDados,
+            GestaoVariedadeDadosC: gestaoVariedadeDadosC,	
+            GestaoVariabilidadeDados: gestaoVariabilidadeDados,
+            GestaoVariabilidadeDadosC: gestaoVariabilidadeDadosC,
+            GestaoAnalytics: gestaoAnalytics,
+            GestaoAnalyticsC: gestaoAnalyticsC
+        };
+        console.log(servicosBackend);
+        sendContent("", servicosBackend, "Sucesso", "Track & Trace - Serviços Backend Gravado Com Sucesso!")
+    }
+
+</script>
+

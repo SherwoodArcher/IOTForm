@@ -1,0 +1,52 @@
+﻿<div style="position: relative; height:100%;">
+    <button type="button" class="button btnTrans btnBorder btnVoltar voltarDashboard">
+        <i class="fas fa-arrow-left"></i>&nbsp; Voltar
+    </button>
+    <div class="columns is-multiline is-desktop is-mobile paddingLR">
+        <div class="column is-8 is-offset-2 has-text-centered">
+            <h3 class="title is-3">Meus Projetos</h3>
+        </div>
+    </div>
+    <div class="wrapper">
+        <form id="adicionarNovoProjeto">
+            <div class="columns is-multiline is-desktop is-mobile paddingLR m10px">
+                <div class="column is-8 is-offset-2 has-text-centered">
+                    <h4 class="title is-4">Adicionar Novo Projeto</h4>
+                </div>
+                <div class="column is-10">
+                    <div class="user-input-wrp">
+                        <br />
+                        <input type="text" class="inputText" name="nomeNovoProjeto" id="nomeNovoProjeto" autocomplete="new-password" required />
+                        <span class="floating-label">Nome do Projeto</span>
+                    </div>
+                </div>
+                <div class="column is-2">
+                    <button type="button" class="button btnTrans btnBorder" id="adicionarProjeto">
+                        <i class="fas fa-check"></i>&nbsp; Salvar
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="wrapper">
+        <div class="columns is-multiline is-desktop is-mobile paddingLR m10px">
+            <div class="column is-8 is-offset-2 has-text-centered">
+                <h4 class="title is-4">Lista de Projetos</h4>
+            </div>
+            <div class="column is-2"></div>
+        </div>
+        <div class="columns is-multiline is-desktop is-mobile paddingLR m10px" id="listaProjetos">
+        </div>
+    </div>
+</div>
+    <script type="text/javascript">
+        "use strict";
+
+        $(".voltarDashboard").off().click(function () {
+            voltarDashboard();
+        });
+        
+        $(document).ready(function () {
+            getAPIContents("/projeto", {},"listarProjetos");
+        });
+    </script>

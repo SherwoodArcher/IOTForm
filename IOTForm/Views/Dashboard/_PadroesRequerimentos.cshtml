@@ -1,0 +1,176 @@
+﻿
+<div style="position: relative; height:100%;">
+    <button type="button" class="button btnTrans btnBorder btnVoltar" id="voltarProjeto">
+        <i class="fas fa-arrow-left"></i>&nbsp; Voltar
+    </button>
+    <div class="columns is-multiline is-desktop is-mobile paddingLR">
+        <div class="column is-8 is-offset-2 has-text-centered">
+            <h3 class="title is-3">Track & Trace - Padrões & Requerimentos Regulatórios</h3>
+        </div>
+    </div>
+    <form id="AmbienteProjeto">
+        <div class="wrapper" id="part1">
+            <div class="columns is-multiline is-desktop is-mobile m10px">
+                <div class="column is-8 is-offset-2 has-text-centered">
+                    <h5 class="title is-5">I. Requerimentos Regulatórios</h5>
+                </div>
+            </div>
+            <div class="wrapper-body paddingLR" id="requerimentosRegulatorios">
+                <div class="columns is-multiline is-desktop is-mobile">
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">1. Regionais específicos</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="requerimentosRegiao">
+                            <option value="1">Nenhum</option>
+                            <option value="2">Baixo</option>
+                            <option value="3">Médio</option>
+                            <option value="4">Complexo</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="requerimentosRegiaoC" id="requerimentosRegiaoC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">2. Específicos da Indústria</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="requerimentosIndustria">
+                            <option value="1">Nenhum</option>
+                            <option value="2">Baixo</option>
+                            <option value="3">Médio</option>
+                            <option value="4">Complexo</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="requerimentosIndustriaC" id="requerimentosIndustriaC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">3. Específicos da Tecnologia</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="requerimentosTecnologia">
+                            <option value="1">Nenhum</option>
+                            <option value="2">Baixo</option>
+                            <option value="3">Médio</option>
+                            <option value="4">Complexo</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="requerimentosTecnologiaC" id="requerimentosTecnologiaC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="button btnTrans btnBorder is-pulled-right proximo part2btn">
+                Próximo &nbsp;<i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="wrapper" id="part2" style="display:none;">
+            <div class="columns is-multiline is-desktop is-mobile m10px">
+                <div class="column is-8 is-offset-2 has-text-centered">
+                    <h5 class="title is-5">II. Padrões</h5>
+                </div>
+            </div>
+            <div class="wrapper-body paddingLR" id="padroes">
+                <div class="columns is-multiline is-desktop is-mobile">
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">1. Padrões técnicos</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="padroesTecnicos">
+                            <option value="1">Nenhum</option>
+                            <option value="2">Alguns prerequisitos para HW M2M, Bus-Systems, Application APIs, Protocolos de Comunicação</option>
+                            <option value="3">Requerimentos relativamente altos para HW M2M, Bus-Systems, Application APIs, Protocolos de Comunicação</option>
+                            <option value="4">Prerequisitos bastante restritos para HW M2M, Bus-Systems, Application APIs, Protocolos de Comunicação</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="padroesTecnicosC" id="padroesTecnicosC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">2. Padrões Funcionais/da Indústria</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="padroesFuncionais">
+                            <option value="1">Nenhum</option>
+                            <option value="2">Alguns prerequisitos para HW M2M, Bus-Systems, Application APIs, Protocolos de Comunicação</option>
+                            <option value="3">Requerimentos relativamente altos para HW M2M, Bus-Systems, Application APIs, Protocolos de Comunicação</option>
+                            <option value="4">Prerequisitos bastante restritos para HW M2M, Bus-Systems, Application APIs, Protocolos de Comunicação</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="padroesFuncionaisC" id="padroesFuncionaisC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="button btnTrans btnBorder anterior part1btn">
+                <i class="fas fa-arrow-left"></i>&nbsp; Anterior
+            </button>
+            <button type="button" class="button btnTrans btnBorder is-pulled-right salvar">
+                <i class="fas fa-check"></i>&nbsp; Salvar
+            </button>
+        </div>
+    </form>
+</div>
+
+<script type="text/javascript">
+    "use strict";
+    $(document).ready(function () {
+        $("#voltarProjeto").off().click(function () {
+            getContent("/Dashboard/Projeto");
+        });
+        $(".part1btn").off().click(function () {
+            $(".wrapper").hide();
+            $("#part1").show();
+        });
+        $(".part2btn").off().click(function () {
+            $(".wrapper").hide();
+            $("#part2").show();
+        });
+        $(".salvar").off().click(function () {
+            enviarPadroesRequerimentos();
+        });
+    });
+
+    function enviarPadroesRequerimentos() {
+
+        var requerimentosRegiao = $("#requerimentosRegiao").val();
+        var requerimentosRegiaoC = $("#requerimentosRegiaoC").val();
+        var requerimentosIndustria = $("#requerimentosIndustria").val();
+        var requerimentosIndustriaC = $("#requerimentosIndustriaC").val();
+        var requerimentosTecnologia = $("#requerimentosTecnologia").val();
+        var requerimentosTecnologiaC = $("#requerimentosTecnologiaC").val();
+        var padroesTecnicos = $("#padroesTecnicos").val();
+        var padroesTecnicosC = $("#padroesTecnicosC").val();
+        var padroesFuncionais = $("#padroesFuncionais").val();
+        var padroesFuncionaisC = $("#padroesFuncionaisC").val();
+
+
+        var padroesRequerimentos = {
+            RequerimentosRegiao: requerimentosRegiao,
+            RequerimentosRegiaoC: requerimentosRegiaoC,
+            RequerimentosIndustria: requerimentosIndustria,
+            RequerimentosIndustriaC: requerimentosIndustriaC,
+            RequerimentosTecnologia: requerimentosTecnologia,
+            RequerimentosTecnologiaC: requerimentosTecnologiaC,
+            PadroesTecnicos: padroesTecnicos,
+            PadroesTecnicosC: padroesTecnicosC,
+            PadroesFuncionais: padroesFuncionais,
+            PadroesFuncionaisC: padroesFuncionaisC
+        };
+        console.log(padroesRequerimentos);
+        sendContent("", padroesRequerimentos, "Sucesso", "Track & Trace - Padrões e Requerimentos Gravado Com Sucesso!")
+    }
+
+</script>
+

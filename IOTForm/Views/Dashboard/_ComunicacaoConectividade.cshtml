@@ -1,0 +1,196 @@
+﻿
+<div style="position: relative; height:100%;">
+    <button type="button" class="button btnTrans btnBorder btnVoltar" id="voltarProjeto">
+        <i class="fas fa-arrow-left"></i>&nbsp; Voltar
+    </button>
+    <div class="columns is-multiline is-desktop is-mobile paddingLR">
+        <div class="column is-8 is-offset-2 has-text-centered">
+            <h3 class="title is-3">Track & Trace - Comunicação e Conectividade</h3>
+        </div>
+    </div>
+    <form id="AmbienteProjeto">
+        <div class="wrapper" id="part1">
+            <div class="columns is-multiline is-desktop is-mobile m10px">
+                <div class="column is-8 is-offset-2 has-text-centered">
+                    <h5 class="title is-5">I. Comunicação e Conectividade Local</h5>
+                </div>
+            </div>
+            <div class="wrapper-body paddingLR" id="geralAtivosDevices">
+                <div class="columns is-multiline is-desktop is-mobile">
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">1. Tecnologia</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="localTecnologia">
+                            <option value="1">Sistema Bus Padrão</option>
+                            <option value="2">Wireless Padrão</option>
+                            <option value="3">Wireless avançado, e.g. Chão de fábrica</option>
+                            <option value="4">Wireless muito avançado, e.g. Requerimento de antena especializada, requerimentos especiais de segurança, etc.</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="localTecnologiaC" id="localTecnologiaC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">2. Largura de banda necessária</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="localLarguraBanda">
+                            <option value="1">100 bytes/s</option>
+                            <option value="2">100 Kbits/s (e.g. RS 485, RS 232, CAN)</option>
+                            <option value="3">1-10 Mbit/s (e.g. vídeo)</option>
+                            <option value="4">>100 Mbit/s (e.g. Fluxo de dados de sensor)</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="localLarguraBandaC" id="localLarguraBandaC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">3. Latência Máxima</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="localMaximaLatencia">
+                            <option value="1">>10 ms (e.g. RS 232)</option>
+                            <option value="2">1-10 ms (e.g. WLAN, BlueTooth)</option>
+                            <option value="3">µ seg (e.g. EtherCAT, Sercos)</option>
+                            <option value="4">ns (e.g. ASIC, FPGA)</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="localMaximaLatenciaC" id="localMaximaLatenciaC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="button btnTrans btnBorder is-pulled-right proximo part2btn">
+                Próximo &nbsp;<i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="wrapper" id="part2" style="display:none;">
+            <div class="columns is-multiline is-desktop is-mobile m10px">
+                <div class="column is-8 is-offset-2 has-text-centered">
+                    <h5 class="title is-5">II. Comunicação e Conectividade Remota</h5>
+                </div>
+            </div>
+            <div class="wrapper-body paddingLR" id="geralAtivosDevices">
+                <div class="columns is-multiline is-desktop is-mobile">
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">1. Tecnologia</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="remotaTecnologia">
+                            <option value="1">LAN</option>
+                            <option value="2">WLAN</option>
+                            <option value="3">Rede Global de Telecom (e.g. UMTS)</option>
+                            <option value="4">Rede global de telecom especializada (e.g. Satélite, rede wireless proprietária, etc)</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="remotaTecnologiaC" id="remotaTecnologiaC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">2. Largura de banda necessária</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="remotaLarguraBanda">
+                            <option value="1">100 bytes/s</option>
+                            <option value="2">100-500 Kbit/s (e.g. GPRS)</option>
+                            <option value="3">0,5-10 Mbit/s (e.g. UMTS/LT)</option>
+                            <option value="4">>100 Mbit/s</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="remotaLarguraBandaC" id="remotaLarguraBandaC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">3. Latência Máxima</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="remotaMaximaLatencia">
+                            <option value="1">90 Min (LEO, e.g. OrbComm; mensagens de texto)</option>
+                            <option value="2">segundos (GPRS)</option>
+                            <option value="3">mili segundos (WAN)</option>
+                            <option value="4">micro segundos (e.g. LAN)</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="remotaMaximaLatenciaC" id="remotaMaximaLatenciaC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="button btnTrans btnBorder anterior part1btn">
+                <i class="fas fa-arrow-left"></i>&nbsp; Anterior
+            </button>
+            <button type="button" class="button btnTrans btnBorder is-pulled-right salvar">
+                <i class="fas fa-check"></i>&nbsp; Salvar
+            </button>
+        </div>
+    </form>
+</div>
+
+<script type="text/javascript">
+    "use strict";
+    $(document).ready(function () {
+        $("#voltarProjeto").off().click(function () {
+            getContent("/Dashboard/Projeto");
+        });
+        $(".part1btn").off().click(function () {
+            $(".wrapper").hide();
+            $("#part1").show();
+        });
+        $(".part2btn").off().click(function () {
+            $(".wrapper").hide();
+            $("#part2").show();
+        });
+        $(".salvar").off().click(function () {
+            enviarComunicacaoConectividade();
+        });
+    });
+
+    function enviarComunicacaoConectividade() {
+      
+        var localTecnologia = $("#localTecnologia").val();
+        var localTecnologiaC = $("#localTecnologiaC").val();
+        var localLarguraBanda = $("#localLarguraBanda").val();
+        var localLarguraBandaC = $("#localLarguraBandaC").val();
+        var localMaximaLatencia = $("#localMaximaLatencia").val();
+        var localMaximaLatenciaC = $("#localMaximaLatenciaC").val();
+        var remotaTecnologia = $("#remotaTecnologia").val();
+        var remotaTecnologiaC = $("#remotaTecnologiaC").val();
+        var remotaLarguraBanda = $("#remotaLarguraBanda").val();
+        var remotaLarguraBandaC = $("#remotaLarguraBandaC").val();
+        var remotaMaximaLatencia = $("#remotaMaximaLatencia").val();
+        var remotaMaximaLatenciaC = $("#remotaMaximaLatenciaC").val();
+        
+
+        var comunicacaoConectividade = {
+            LocalTecnologia: localTecnologia,
+            LocalTecnologiaC: localTecnologiaC,
+            LocalLarguraBanda: localLarguraBanda,
+            LocalLarguraBandaC: localLarguraBandaC,
+            LocalMaximaLatencia: localMaximaLatencia,
+            LocalMaximaLatenciaC: localMaximaLatenciaC,
+            RemotaTecnologia: remotaTecnologia,
+            RemotaTecnologiaC: remotaTecnologiaC,
+            RemotaLarguraBanda: remotaLarguraBanda,
+            RemotaLarguraBandaC: remotaLarguraBandaC,
+            RemotaMaximaLatencia: remotaMaximaLatencia,
+            RemotaMaximaLatenciaC: remotaMaximaLatenciaC
+        };
+        console.log(comunicacaoConectividade);
+        sendContent("", comunicacaoConectividade, "Sucesso", "Track & Trace - Comunicação e Conectividade Gravado Com Sucesso!")
+    }
+
+</script>
+

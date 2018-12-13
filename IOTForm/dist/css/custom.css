@@ -1,0 +1,335 @@
+﻿    body {
+        font-family: Segoe UI;
+    }
+
+    input {
+        outline: 0 !important;
+        border-width: 0 0 2px !important;
+        border-color: #BBB !important;
+        color: #BBB !important;
+        background-color: transparent !important;
+        border-radius: 0 !important;
+    }
+
+    input:focus {
+        border-color: #00BBCF !important;
+        color: #FFF !important;
+        box-shadow: 0px 0px 0px 0px rgba(0, 187, 207, 1) !important;
+    }
+
+    label{
+        font-family: 'Segoe UI';
+    }
+
+    ::-webkit-input-placeholder {
+        color: #BBB !important;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .bgimg {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            z-index: -3;
+            background-size: cover;
+            background: url(../img/Fundo_IOT_768x1024px.jpg) no-repeat center center fixed;
+        }
+
+        #btnEntrar{
+            width: 100%;
+        }
+
+        .marginButtonHome{
+            margin-top: 20px;
+        }
+    }
+
+    @media only screen and (min-width: 769px) {
+        .bgimg {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            z-index: -3;
+            background-size: cover;
+            background: url(../img/Fundo_IOT_1366x660px.jpg) no-repeat center center fixed;
+        }
+
+        #btnEntrar {
+            float: right;
+        }
+
+        .marginButtonHome {
+            margin-top: 40px;
+        }
+    }
+
+    .btnTrans {
+        background-color: rgba(0,0,0,0) !important;
+        border: 0;
+        border-radius: 0;
+        color: white !important;
+    }
+
+    .btnBorder{
+        border: 1px solid white;
+    }
+
+    .btnBorder:hover {
+        color: #00BBCF !important;
+        border: 1px solid #00BBCF !important;
+    }
+
+    .opacity {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.1);
+        z-index: -1;
+    }
+
+    .color {
+        color: #00BBCF !important;
+    }
+
+    .bgColor {
+        background-color: #00BBCF !important;
+    }
+
+    .column{
+        padding: 10px;
+    }
+
+    .centerLogin {
+        height: 100vh !important;
+    }
+
+    #login-box {
+        height: 100%;
+        background-color: rgba(0,0,0,0.6);
+        color: white;
+        padding: 15px;
+    }
+
+    #formLogin > .label,
+    #formLogin > div > .button {
+        color: white;
+        font-size: 20px;
+        font-weight:400;
+    }
+
+    #btnEntrar{
+        color:white;
+    }
+
+    .m0px {
+        margin-top: 0px;
+    }
+    .m10px {
+        margin-top: 10px;
+    }
+
+    .m20px {
+        margin-top: 20px;
+    }
+
+    #conteudo {
+        width: 90vw;
+        height: 90vh;
+        margin: 5vh 5vw 5vh 5vw;
+        background-color: rgba(0,0,0,0.7);
+        color: white;
+    }
+
+    .hoverBlue {
+        background-color: rgba(0,0,0,0) !important;
+        border: 0;
+        color: white !important;
+        display: inline-block !important;
+        height: 100%;
+    }
+
+    .marginButtonHome {
+
+    }
+
+    .hoverBlue:hover {
+        color: #00BBCF !important;
+    }
+
+    .buttonFont {
+        font-size: 2em;
+    }
+
+    .paddingLR{
+        padding-right: 0.75rem;
+        padding-left: 0.75rem;
+    }
+
+    .title{
+        color: white !important;
+    }
+
+    .wrapper {
+        border-top: 1px solid white;
+        margin: 10px;
+    }
+
+    .wrapper-body {
+        padding-bottom: 10px;
+    }
+
+    .logoSmall {
+        padding-top: 0.75rem;
+        max-height: 36px;
+    }
+
+   .btnVoltar {
+        position: absolute;
+        left: 0.75em;
+        top: 0.75em;
+    }
+
+    .salvar, .proximo {
+        position: absolute;
+        right: 0.75em;
+        bottom: 0.75em;
+    }
+
+    .anterior{
+        position: absolute;
+        left: 0.75em;
+        bottom: 0.75em;
+    }
+   
+    .user-input-wrp {
+        position: relative;
+    }
+
+    .user-input-wrp .inputText {
+        width: 100%;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #777;
+    }
+
+    .user-input-wrp .inputText:invalid {
+        box-shadow: none !important;
+    }
+
+    .user-input-wrp .inputText:focus {
+        border-color: blue;
+        border-width: medium medium 2px;
+    }
+
+    .user-input-wrp .floating-label {
+        position: absolute;
+        pointer-events: none;
+        top: 18px;
+        left: 0px;
+        transition: 0.2s ease all;
+    }
+
+    .user-input-wrp .not-floating-label {
+        position: absolute;
+        pointer-events: none;
+        top: 0px;
+        left: 0px;
+        font-size: 13px;
+        opacity: 1;
+    }
+
+    .user-input-wrp input:focus ~ .floating-label,
+    .user-input-wrp input:not(:focus):valid ~ .floating-label {
+        top: 0px;
+        left: 0px;
+        font-size: 13px;
+        opacity: 1;
+    }
+
+    #adicionarProjeto,
+    #buscarClienteBtn{
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    .btnFull{
+        width: 100%;
+    }
+
+    .whiteBorder{
+        border: 1px solid white;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 20px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(40px);
+      -ms-transform: translateX(40px);
+      transform: translateX(40px);
+    }
+
+    .switch-font{
+        font-size: 14px;
+    }
+    .font-12{
+        font-size: 12px;
+    }
+
+    .pt0{
+        padding-top: 0;
+    }
+
+    .selectTT{
+        width: 100%;
+        background-color: transparent;
+        color: white;
+    }
+
+     option{
+        width: 100%;
+        background-color: transparent;
+        color: black !important;
+     }

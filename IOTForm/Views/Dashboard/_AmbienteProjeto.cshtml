@@ -1,0 +1,126 @@
+﻿
+<div style="position: relative; height:100%;">
+    <button type="button" class="button btnTrans btnBorder btnVoltar" id="voltarProjeto">
+        <i class="fas fa-arrow-left"></i>&nbsp; Voltar
+    </button>
+    <div class="columns is-multiline is-desktop is-mobile paddingLR">
+        <div class="column is-8 is-offset-2 has-text-centered">
+            <h3 class="title is-3">Track & Trace - Ambiente de Projeto</h3>
+        </div>
+    </div>
+    <form id="AmbienteProjeto">
+        <div class="wrapper" id="part1">
+            <div class="columns is-multiline is-desktop is-mobile m10px">
+                <div class="column is-8 is-offset-2 has-text-centered">
+                    <h5 class="title is-5">I. Requerimentos regulatórios</h5>
+                </div>
+            </div>
+            <div class="wrapper-body paddingLR" id="ambienteProjeto">
+                <div class="columns is-multiline is-desktop is-mobile">
+                    <div class="column is-12">
+                        <div><h6 class="title is-6">1. Tempo</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="ambienteTempo">
+                            <option value="1">Muito Tempo</option>
+                            <option value="2">Design a orçamento</option>
+                            <option value="3">Agressivo</option>
+                            <option value="4">"Marcha da morte"</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="ambienteTempoC" id="ambienteTempoC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                    <div class="column is-12">
+                        <div><h6 class="title is-6">2. Budget</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="ambienteBudget">
+                            <option value="1">Generoso</option>
+                            <option value="2">Realístico</option>
+                            <option value="3">Otimista</option>
+                            <option value="4">Irrealista e insuficiente</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="ambienteBudgetC" id="ambienteBudgetC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                    <div class="column is-12">
+                        <div><h6 class="title is-6">3. Competências funcionais e experiência</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="ambienteFuncionais">
+                            <option value="1">Equipe existente, já fez projeto semelhante antes</option>
+                            <option value="2">Equipe existente, já fez projeto semelhante antes, porém geograficamente distribuido</option>
+                            <option value="3">Equipe completamente nova, membros com pouca experiencia funcional na área</option>
+                            <option value="4">Equipe completamente nova, membros com pouca experiencia funcional na área, porém geograficamente distribuido</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="ambienteFuncionaisC" id="ambienteFuncionaisC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                    <div class="column is-12">
+                        <div><h6 class="title is-6">4. Competências técnicas e experiência</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="ambienteTecnicas">
+                            <option value="1">Equipe existente, já fez projeto semelhante antes</option>
+                            <option value="2">Equipe existente, já fez projeto semelhante antes, porém geograficamente distribuido</option>
+                            <option value="3">Equipe completamente nova, membros com pouca experiencia funcional na área</option>
+                            <option value="4">Equipe completamente nova, membros com pouca experiencia funcional na área, porém geograficamente distribuido</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="ambienteTecnicasC" id="ambienteTecnicasC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="button btnTrans btnBorder is-pulled-right salvar">
+                <i class="fas fa-check"></i>&nbsp; Salvar
+            </button>
+        </div>
+    </form>
+</div>
+
+<script type="text/javascript">
+    "use strict";
+    $(document).ready(function () {
+        $("#voltarProjeto").off().click(function () {
+            getContent("/Dashboard/Projeto");
+        });
+        $(".salvar").off().click(function () {
+            enviarAmbienteProjeto();
+        });
+    });
+
+    function enviarAmbienteProjeto() {
+        var ambienteTempo = $("#ambienteTempo").val();
+        var ambienteTempoC = $("#ambienteTempoC").val();
+        var ambienteBudget = $("#ambienteBudget").val();
+        var ambienteBudgetC = $("#ambienteBudgetC").val();
+        var ambienteFuncionais = $("#ambienteFuncionais").val();
+        var ambienteFuncionaisC = $("#ambienteFuncionaisC").val();
+        var ambienteTecnicas = $("#ambienteTecnicas").val();
+        var ambienteTecnicasC = $("#ambienteTecnicasC").val();
+        var ambienteProjeto = {
+            AmbienteTempo: ambienteTempo,
+            AmbienteTempoC: ambienteTempoC,
+            AmbienteBudget: ambienteBudget,
+            AmbienteBudgetC: ambienteBudgetC,
+            AmbienteFuncionais: ambienteFuncionais,
+            AmbienteFuncionaisC: ambienteFuncionaisC,
+            AmbienteTecnicas: ambienteTecnicas,
+            AmbienteTecnicasC: ambienteTecnicasC
+        };
+        sendContent("", ambienteProjeto,"Sucesso", "Track & Trace - Ambiente de Projeto Gravado Com Sucesso!")
+    }
+
+</script>

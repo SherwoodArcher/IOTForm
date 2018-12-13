@@ -1,0 +1,54 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login | Projetos de IOT - BandTec</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/dist/css/bulma.css" />
+    <link rel="stylesheet" href="~/dist/css/custom.css" />
+    <script type="text/javascript" src="~/dist/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="~/dist/js/custom.js"></script>
+    <script type="text/javascript" src="~/dist/js/login.js"></script>
+</head>
+<body class="bgimg">
+    <div class="opacity"></div>
+    <div class="columns is-centered is-desktop is-mobile is-vcentered centerLogin">
+        <div class="column is-half-mobile is-one-third-desktop">
+            <div id="login-box">
+                <form id="formLogin" class="control">
+                    <img src="~/dist/img/logoBandtec.png" />
+                    <h4 class="subtitle is-3 color is-hidden-mobile">Projetos de IOT</h4>
+                    <label for="login" class="label">Login</label>
+                    <div class="control has-icons-left">
+                        <input type="email" class="input" name="login" id="login" placeholder="Digite o seu email" autocomplete="off" />
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                    </div>
+                    <label for="senha" class="label m10px">Senha</label>
+                    <div class="control has-icons-left">
+                        <input type="password" class="input" name="senha" id="senha" placeholder="Digite sua senha" autocomplete="off" />
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-unlock-alt"></i>
+                        </span>
+                    </div>
+                    <div id="erro" style="display:none;">
+                        Login e senha não conferem!
+                    </div>
+                    <div class="columns">
+                        <div class="column is-desktop is-mobile">
+                            <button type="submit" class="button bgColor m20px" id="btnEntrar"><i class="fas fa-sign-in-alt"></i>&nbsp;Entrar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

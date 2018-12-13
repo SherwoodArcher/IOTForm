@@ -1,0 +1,106 @@
+﻿<div style="position: relative; height:100%;">
+    <button type="button" class="button btnTrans btnBorder btnVoltar" id="voltarMeusProjetos">
+        <i class="fas fa-arrow-left"></i>&nbsp; Voltar
+    </button>
+    <div class="columns is-multiline is-desktop is-mobile paddingLR">
+        <div class="column is-8 is-offset-2 has-text-centered">
+            <h3 class="title is-3">Projeto - <span id="nomeProjeto"></span></h3>
+        </div>
+    </div>
+    <div class="columns is-multiline is-desktop is-mobile paddingLR">
+        <div class="column is-6-desktop is-12-mobile is-desktop is-mobile">
+            <div id="graficoProjeto">Gráfico Projeto</div>
+        </div>
+        <div class="column is-6-desktop is-12-mobile is-desktop is-mobile">
+            <div class="columns is-multiline is-desktop is-mobile paddingLR">
+                <div class="column is-12">
+                    <div class="columns is-multiline is-desktop is-mobile whiteBorder">
+                        <div class="column is-12 has-text-centered">
+                            <h4 class="title is-4">Questionário Inicial</h4>
+                        </div>
+                        <div class="column is-12">
+                            <button type="button" class="button btnTrans btnFull btnBorder" id="btnFormularioGeral">
+                                Formulário Geral
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-12 m20px">
+                    <div class="columns is-multiline is-desktop is-mobile whiteBorder">
+                        <div class="column is-12 has-text-centered">
+                            <h4 class="title is-4">Track & Trace</h4>
+                        </div>
+                        <div class="column is-12">
+                            <button type="button" class="button btnTrans btnFull btnBorder" id="btnAtivosDevices">
+                                Ativos e Devices
+                            </button>
+                        </div>
+                        <div class="column is-12">
+                            <button type="button" class="button btnTrans btnFull btnBorder" id="btnComunicacaoConectividade">
+                                Comunicação e Conectividade
+                            </button>
+                        </div>
+                        <div class="column is-12">
+                            <button type="button" class="button btnTrans btnFull btnBorder" id="btnServicosBackend">
+                                Serviços de Backend
+                            </button>
+                        </div>
+                        <div class="column is-12">
+                            <button type="button" class="button btnTrans btnFull btnBorder" id="btnPadroesRequerimentos">
+                                Padrões e Requerimentos
+                            </button>
+                        </div>
+                        <div class="column is-12">
+                            <button type="button" class="button btnTrans btnFull btnBorder" id="btnAmbienteProjeto">
+                                Ambiente de Projeto
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+        "use strict";
+
+        if (window.innerWidth < 769) {
+
+        }
+
+
+        $(".voltarDashboard").off().click(function () {
+            voltarDashboard();
+        });
+        $(document).ready(function () {
+            $("#voltarMeusProjetos").click(function () {
+                getContent("/Dashboard/MeusProjetos");
+            });
+
+            $("#btnFormularioGeral").click(function () {
+                getContent("/Dashboard/FormularioGeral");
+            });
+
+            $("#btnAtivosDevices").click(function () {
+                getContent("/Dashboard/AtivosDevices");
+            });
+
+            $("#btnComunicacaoConectividade").click(function () {
+                getContent("/Dashboard/ComunicacaoConectividade");
+            });
+
+            $("#btnServicosBackend").click(function () {
+                getContent("/Dashboard/ServicosBackend");
+            });
+
+            $("#btnPadroesRequerimentos").click(function () {
+                getContent("/Dashboard/PadroesRequerimentos");
+            });
+
+            $("#btnAmbienteProjeto").click(function () {
+                getContent("/Dashboard/AmbienteProjeto");
+            });
+        });
+       
+
+</script>

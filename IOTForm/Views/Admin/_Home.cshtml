@@ -1,0 +1,53 @@
+﻿<div class="columns is-centered has-text-centered">
+    <div class="column is-12-mobile is-one-third-desktop">
+        <img src="~/dist/img/logoBandtec.png" class="m20px" />
+    </div>
+</div>
+
+<div class="columns is-multiline is-centered is-desktop is-mobile has-text-centered">
+    <div class="column is-12-mobile is-one-third-desktop marginButtonHome">
+        <button type="button" class="button hoverBlue" id="adicionarClienteBtn">
+            <div>
+                <i class="fas fa-user-plus fa-7x"></i>
+            </div>
+            <div class="buttonFont">
+                Cadastrar Cliente
+            </div>
+        </button>
+    </div>
+    <div class="column is-12-mobile is-one-third-desktop marginButtonHome">
+        <button type="button" class="button hoverBlue" id="visualizarClientesBtn">
+            <div>
+                <i class="fas fa-users fa-7x"></i>
+            </div>
+            <div class="buttonFont">
+                Visualizar Clientes
+            </div>
+        </button>
+    </div>
+    <div class="column is-12-mobile is-one-third-desktop marginButtonHome">
+        <button type="button" class="button hoverBlue" id="logoutBtn">
+            <div>
+                <i class="fas fa-sign-out-alt fa-7x"></i>
+            </div>
+            <div class="buttonFont">
+                Logout
+            </div>
+        </button>
+    </div>
+</div>
+<script type="text/javascript">
+    "use strict";
+
+    $("#adicionarClienteBtn").off().click(function () {
+        getContent("/Admin/AdicionarCliente",true);
+    });
+
+    $("#visualizarClientesBtn").off().click(function () {
+        getContent("/Admin/VisualizarClientes",true);
+    });
+    
+    $("#logoutBtn").off().click(function () {
+        logout();
+    });
+</script>

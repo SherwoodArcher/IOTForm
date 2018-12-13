@@ -1,0 +1,417 @@
+﻿
+<div style="position: relative; height:100%;">
+    <button type="button" class="button btnTrans btnBorder btnVoltar" id="voltarProjeto">
+        <i class="fas fa-arrow-left"></i>&nbsp; Voltar
+    </button>
+    <div class="columns is-multiline is-desktop is-mobile paddingLR">
+        <div class="column is-8 is-offset-2 has-text-centered">
+            <h3 class="title is-3">Track & Trace - Ativos e Devices</h3>
+        </div>
+    </div>
+    <form id="AmbienteProjeto">
+        <div class="wrapper" id="part1">
+            <div class="columns is-multiline is-desktop is-mobile m10px">
+                <div class="column is-8 is-offset-2 has-text-centered">
+                    <h5 class="title is-5">I. Geral</h5>
+                </div>
+            </div>
+            <div class="wrapper-body paddingLR" id="geralAtivosDevices">
+                <div class="columns is-multiline is-desktop is-mobile">
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">1. Número de ativos</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="geralNumeroAtivos">
+                            <option value="1">100s</option>
+                            <option value="2">10.000s</option>
+                            <option value="3">100.000s</option>
+                            <option value="4">Milhões</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="geralNumeroAtivosC" id="geralNumeroAtivosC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">2. Valor do ativo individual</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="geralValorAtivo">
+                            <option value="1">< R$ 500</option>
+                            <option value="2">< R$ 5.000</option>
+                            <option value="3">< R$ 500.000</option>
+                            <option value="4">>= R$ 500.000</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="geralValorAtivoC" id="geralValorAtivoC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">3. Valor econômico adicionado por ativo indiv./Ano</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="geralValorEconomico">
+                            <option value="1">< R$ 500</option>
+                            <option value="2">< R$ 5.000</option>
+                            <option value="3">< R$ 500.000</option>
+                            <option value="4">>= R$ 500.000</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="geralValorEconomicoC" id="geralValorEconomicoC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">4. Complexidade do Ativo - Perspectiva de Integração</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="geralComplexidadeAtivo">
+                            <option value="1">Zero integração</option>
+                            <option value="2">Interface semântica simples</option>
+                            <option value="3">Interface semântica moderadamente complexa</option>
+                            <option value="4">Interface semântica bastante complexa</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="geralComplexidadeAtivoC" id="geralComplexidadeAtivoC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="button btnTrans btnBorder is-pulled-right proximo part15btn">
+                Próximo &nbsp;<i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="wrapper" id="part15" style="display:none;">
+            <div class="columns is-multiline is-desktop is-mobile m10px">
+                <div class="column is-8 is-offset-2 has-text-centered">
+                    <h5 class="title is-5">I. Geral</h5>
+                </div>
+            </div>
+            <div class="wrapper-body paddingLR" id="geralAtivosDevices2">
+                <div class="column is-12 pt0">
+                    <div><h6 class="title is-6">5. Heterogeneidade do ativo - Perspectiva de Integração (inc. versões e variantes)</h6></div>
+                </div>
+                <div class="column is-12 pt0">
+                    <select class="selectTT" id="geralHeteroAtivo">
+                        <option value="1">0-1 tipos de interface</option>
+                        <option value="2">2-3 diferentes tipos de interface (inc. versões e variantes)</option>
+                        <option value="3">4-10 diferentes tipos de interfaces</option>
+                        <option value="4">> 10 diferentes tipos de interfaces</option>
+                    </select>
+                </div>
+                <div class="column is-12 pt0">
+                    <div class="user-input-wrp">
+                        <input type="text" class="inputText" name="geralHeteroAtivoC" id="geralHeteroAtivoC" placeholder="Comentários" autocomplete="new-password" required />
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="button btnTrans btnBorder anterior part1btn">
+                <i class="fas fa-arrow-left"></i>&nbsp; Anterior
+            </button>
+            <button type="button" class="button btnTrans btnBorder is-pulled-right proximo part2btn">
+                Próximo &nbsp;<i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="wrapper" id="part2" style="display:none;">
+            <div class="columns is-multiline is-desktop is-mobile m10px">
+                <div class="column is-8 is-offset-2 has-text-centered">
+                    <h5 class="title is-5">II. Poder de Processamento</h5>
+                </div>
+            </div>
+            <div class="wrapper-body paddingLR" id="geralAtivosDevices">
+                <div class="columns is-multiline is-desktop is-mobile">
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">1. Lógica de negócio local</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="poderLogicaNegocio">
+                            <option value="1">Apenas funções Proxy</option>
+                            <option value="2">Lógica básica de armazenamento e encaminhamento para tratar a Indisponibilidade temporária da Rede</option>
+                            <option value="3">Lógica de negócio simples, e.g. Regras</option>
+                            <option value="4">Lógica de negócio complexa, e.g. Gerenciamento autônomo do ativo</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="poderLogicaNegocioC" id="poderLogicaNegocioC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">2. Processamento local de evento</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="poderProcessamento">
+                            <option value="1">1 evento / dia</option>
+                            <option value="2">1 evento / minuto</option>
+                            <option value="3">1 evento / segundo</option>
+                            <option value="4">10.000 eventos / segundo</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="poderProcessamentoC" id="poderProcessamentoC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">3. Requisitos de tempo real</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="poderRequerimentos">
+                            <option value="1">Sincronização diária em lote</option>
+                            <option value="2">Respostas em segundos</option>
+                            <option value="3">Resposta dentro do sub-segundo</option>
+                            <option value="4">Resposta deterministica em nano-segundos</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="poderRequerimentosC" id="poderRequerimentosC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">4. Gerenciamento local de dados</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="poderGestaoLocal">
+                            <option value="1">< 1MB armazenado e gerenciado localmente / ano</option>
+                            <option value="2">< 10 GB/ano</option>
+                            <option value="3">< 1 TB/ano</option>
+                            <option value="4">> 1 TB capturado por ativo /ano</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="poderGestaoLocalC" id="poderGestaoLocalC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="button btnTrans btnBorder anterior part15btn">
+                <i class="fas fa-arrow-left"></i>&nbsp; Anterior
+            </button>
+            <button type="button" class="button btnTrans btnBorder is-pulled-right proximo part3btn">
+                Próximo &nbsp;<i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="wrapper" id="part3" style="display:none;">
+            <div class="columns is-multiline is-desktop is-mobile m10px">
+                <div class="column is-8 is-offset-2 has-text-centered">
+                    <h5 class="title is-5">III. Outros Requisitos de Hardware</h5>
+                </div>
+            </div>
+            <div class="wrapper-body paddingLR" id="outrosRequisitos">
+                <div class="columns is-multiline is-desktop is-mobile">
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">1. Suprimento de energia</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="outrosFonteEnergia">
+                            <option value="1">"Tomada elétrica“</option>
+                            <option value="2">Bateria carregada automaticamente (e.g. carro)</option>
+                            <option value="3">Bateria grande com duração moderada</option>
+                            <option value="4">Bateria pequena com duração muito longa (sem auto-recarga)</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="outrosFonteEnergiaC" id="outrosFonteEnergiaC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">2. Ambiente</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="outrosAmbiente">
+                            <option value="1">Interno</option>
+                            <option value="2">Interno severo, (e.g. Fábrica)/Externo</option>
+                            <option value="3">Externo, em movimento (e.g. carro)</option>
+                            <option value="4">Condições extremas, (e.g. aeronave, espaço)</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="outrosAmbienteC" id="outrosAmbienteC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="button btnTrans btnBorder anterior part2btn">
+                <i class="fas fa-arrow-left"></i>&nbsp; Anterior
+            </button>
+            <button type="button" class="button btnTrans btnBorder is-pulled-right proximo part4btn">
+                Próximo &nbsp;<i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="wrapper" id="part4" style="display:none;">
+            <div class="columns is-multiline is-desktop is-mobile m10px">
+                <div class="column is-8 is-offset-2 has-text-centered">
+                    <h5 class="title is-5">IV. Gestão do Ciclo de Vida</h5>
+                </div>
+            </div>
+            <div class="wrapper-body paddingLR" id="gestaoCiclo">
+                <div class="columns is-multiline is-desktop is-mobile">
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">1. Tempo de vida projetado para o ativo</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="gestaoVidaUtil">
+                            <option value="1">< 1 ano</option>
+                            <option value="2">~ 5 anos</option>
+                            <option value="3">~ 10 anos</option>
+                            <option value="4">> 20 anos</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="gestaoVidaUtilC" id="gestaoVidaUtilC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">2. Restrições para atualização de Hardware</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="gestaoRestricoesHardware">
+                            <option value="1">Todos os ativos podem ser acessados por um técnico especializado a tempo, sem grande custo</option>
+                            <option value="2">Relativo esforço e custo para técnico acessar os ativos</option>
+                            <option value="3">Configuração do ativo deve ser atualizada pelo usuário final/alto custo para trazer o ativo para reparo na oficina</option>
+                            <option value="4">Impossivel de atualizar o Hardware</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="gestaoRestricoesHardwareC" id="gestaoRestricoesHardwareC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div><h6 class="title is-6">3. Restrições para atualização de Software</h6></div>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <select class="selectTT" id="gestaoRestricoesSoftware">
+                            <option value="1">Gerenciamento central, ativos sempre online, largura de banda suficiente, desligamento para manutenção é OK</option>
+                            <option value="2">Restrições normais para sistemas distribuidos, e.g. Nem todos ao mesmo tempo (versões paralelas por um longo período)</option>
+                            <option value="3">Muito difícil - longos tempos entre atualizações, e.g. apenas iniciado pelo usuário (e.g. usuário tem que pro-ativamente iniciar a atualização)</option>
+                            <option value="4">Impossível de atualizar Software</option>
+                        </select>
+                    </div>
+                    <div class="column is-12 pt0">
+                        <div class="user-input-wrp">
+                            <input type="text" class="inputText" name="gestaoRestricoesSoftwareC" id="gestaoRestricoesSoftwareC" placeholder="Comentários" autocomplete="new-password" required />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="button btnTrans btnBorder anterior part3btn">
+                <i class="fas fa-arrow-left"></i>&nbsp; Anterior
+            </button>
+            <button type="button" class="button btnTrans btnBorder is-pulled-right salvar">
+                <i class="fas fa-check"></i>&nbsp; Salvar
+            </button>
+        </div>
+    </form>
+</div>
+
+<script type="text/javascript">
+    "use strict";
+    $(document).ready(function () {
+        $("#voltarProjeto").off().click(function () {
+            getContent("/Dashboard/Projeto");
+        });
+        $(".part1btn").off().click(function () {
+            $(".wrapper").hide();
+            $("#part1").show();
+        });
+        $(".part15btn").off().click(function () {
+            $(".wrapper").hide();
+            $("#part15").show();
+        });
+        $(".part2btn").off().click(function () {
+            $(".wrapper").hide();
+            $("#part2").show();
+        });
+        $(".part3btn").off().click(function () {
+            $(".wrapper").hide();
+            $("#part3").show();
+        });
+        $(".part4btn").off().click(function () {
+            $(".wrapper").hide();
+            $("#part4").show();
+        });
+        $(".salvar").off().click(function () {
+            enviarAtivosDevices();
+        });
+    });
+
+    function enviarAtivosDevices() {
+        var geralNumeroAtivos = $("#geralNumeroAtivos").val();
+        var geralNumeroAtivosC = $("#geralNumeroAtivosC").val();
+        var geralValorAtivo = $("#geralValorAtivo").val();
+        var geralValorAtivoC = $("#geralValorAtivoC").val();
+        var geralValorEconomico = $("#geralValorEconomico").val();
+        var geralValorEconomicoC = $("#geralValorEconomicoC").val();
+        var geralComplexidadeAtivo = $("#geralComplexidadeAtivo").val();
+        var geralComplexidadeAtivoC = $("#geralComplexidadeAtivoC").val();
+        var geralHeteroAtivo = $("#geralHeteroAtivo").val();
+        var geralHeteroAtivoC = $("#geralHeteroAtivoC").val();
+
+        var poderLogicaNegocio = $("#poderLogicaNegocio").val();
+        var poderLogicaNegocioC = $("#poderLogicaNegocioC").val();
+        var poderProcessamento = $("#poderProcessamento").val();
+        var poderProcessamentoC = $("#poderProcessamentoC").val();
+        var poderRequerimentos = $("#poderRequerimentos").val();
+        var poderRequerimentosC = $("#poderRequerimentosC").val();
+        var poderGestaoLocal = $("#poderGestaoLocal").val();
+        var poderGestaoLocalC = $("#poderGestaoLocalC").val();
+
+        var outrosFonteEnergia = $("#outrosFonteEnergia").val();
+        var outrosFonteEnergiaC = $("#outrosFonteEnergiaC").val();
+        var outrosAmbiente = $("#outrosAmbiente").val();
+        var outrosAmbienteC = $("#outrosAmbienteC").val();
+
+        var gestaoVidaUtil = $("#gestaoVidaUtil").val();
+        var gestaoVidaUtilC = $("#gestaoVidaUtilC").val();
+        var gestaoRestricoesHardware = $("#gestaoRestricoesHardware").val();
+        var gestaoRestricoesHardwareC = $("#gestaoRestricoesHardwareC").val();
+        var gestaoRestricoesSoftware = $("#gestaoRestricoesSoftware").val();
+        var gestaoRestricoesSoftwareC = $("#gestaoRestricoesSoftwareC").val();
+      
+        var ativosDevices = {
+            GeralNumeroAtivos: geralNumeroAtivos,
+            GeralNumeroAtivosC: geralNumeroAtivosC,
+            GeralValorAtivo: geralValorAtivo,
+            GeralValorAtivoC: geralValorAtivoC,
+            GeralValorEconomico: geralValorEconomico,
+            GeralValorEconomicoC: geralValorEconomicoC,
+            GeralComplexidadeAtivo: geralComplexidadeAtivo,
+            GeralComplexidadeAtivoC: geralComplexidadeAtivoC,
+            GeralHeteroAtivo: geralHeteroAtivo,
+            GeralHeteroAtivoC: geralHeteroAtivoC,
+            PoderLogicaNegocio: poderLogicaNegocio,
+            PoderLogicaNegocioC: poderLogicaNegocioC,
+            PoderProcessamento: poderProcessamento,
+            PoderProcessamentoC: poderProcessamentoC,
+            PoderRequerimentos: poderRequerimentos,
+            PoderRequerimentosC: poderRequerimentosC,
+            PoderGestaoLocal: poderGestaoLocal,
+            PoderGestaoLocalC: poderGestaoLocalC,
+            OutrosFonteEnergia: outrosFonteEnergia,
+            OutrosFonteEnergiaC: outrosFonteEnergiaC,
+            OutrosAmbiente: outrosAmbiente,
+            OutrosAmbienteC: outrosAmbienteC,
+            GestaoVidaUtil: gestaoVidaUtil,
+            GestaoVidaUtilC: gestaoVidaUtilC,
+            GestaoRestricoesHardware: gestaoRestricoesHardware,
+            GestaoRestricoesHardwareC: gestaoRestricoesHardwareC,
+            GestaoRestricoesSoftware: gestaoRestricoesSoftware,
+            GestaoRestricoesSoftwareC: gestaoRestricoesSoftwareC
+        };
+        console.log(ativosDevices);
+        sendContent("", ativosDevices, "Sucesso", "Track & Trace - Ativos e Devices Gravado Com Sucesso!")
+    }
+
+</script>

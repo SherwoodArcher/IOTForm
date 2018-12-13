@@ -1,0 +1,267 @@
+﻿<div style="position: relative; height:100%;">
+    <button type="button" class="button btnTrans btnBorder btnVoltar voltarDashboard">
+        <i class="fas fa-arrow-left"></i>&nbsp; Voltar
+    </button>
+    <div class="columns is-multiline is-desktop is-mobile paddingLR">
+        <div class="column is-8 is-offset-2 has-text-centered">
+            <h3 class="title is-3">Meus Dados</h3>
+        </div>
+    </div>
+    <form id="meusDados">
+        <div class="wrapper">
+            <div class="columns is-multiline is-desktop is-mobile m10px">
+                <div class="column is-8 is-offset-2 has-text-centered">
+                    <h4 class="title is-4">Dados da Empresa</h4>
+                </div>
+                <div class="column is-1 is-offset-1 has-text-centered">
+                    <button type="button" class="button btnTrans is-hidden-mobile btnMeusDados">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="wrapper-body paddingLR" id="dadosDaEmpresa">
+                <div class="columns is-multiline is-desktop is-mobile">
+                    <div class="column is-8">
+                        <div class="user-input-wrp">
+                            <br />
+                            <input type="text" class="inputText" name="razaoSocial" id="razaoSocial" autocomplete="new-password" required />
+                            <span class="floating-label">Razão Social</span>
+                        </div>
+                    </div>
+                    <div class="column is-4">
+                        <div class="user-input-wrp">
+                            <br />
+                            <input type="text" class="inputText" name="cnpj" id="cnpj" autocomplete="new-password" required />
+                            <span class="floating-label">CNPJ *</span>
+                        </div>
+                    </div>
+                    <div class="column is-8">
+                        <div class="user-input-wrp">
+                            <br />
+                            <input type="text" class="inputText" name="nomeFantasia" id="nomeFantasia" autocomplete="new-password" required />
+                            <span class="floating-label">Nome Fantasia *</span>
+                        </div>
+                    </div>
+                    <div class="column is-4">
+                        <div class="user-input-wrp">
+                            <br />
+                            <input type="text" class="inputText" name="areaAtuacao" id="areaAtuacao" autocomplete="new-password" required />
+                            <span class="floating-label">Área de atuação *</span>
+                        </div>
+                    </div>
+                    <div class="column is-12">
+                        <div class="user-input-wrp">
+                            <br />
+                            <input type="text" class="inputText" name="site" id="site" autocomplete="new-password" required/>
+                            <span class="floating-label">Site</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="columns is-multiline is-desktop is-mobile m10px">
+                <div class="column is-8 is-offset-2 has-text-centered">
+                    <h4 class="title is-4">Dados de Contato</h4>
+                </div>
+                <div class="column is-1 is-offset-1 has-text-centered">
+                    <button type="button" class="button btnTrans is-hidden-mobile btnMeusDados">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="wrapper-body paddingLR" id="dadosDeContato" style="display:none;">
+                <div class="columns is-multiline is-desktop is-mobile">
+                    <div class="column is-8">
+                        <div class="user-input-wrp">
+                            <br />
+                            <input type="text" class="inputText" name="nomeContato" id="nomeContato" autocomplete="new-password" required />
+                            <span class="floating-label">Nome do contato *</span>
+                        </div>
+                    </div>
+                    <div class="column is-4">
+                        <div class="user-input-wrp">
+                            <br />
+                            <input type="text" class="inputText" name="cargo" id="cargo" autocomplete="new-password" required />
+                            <span class="floating-label">Cargo *</span>
+                        </div>
+                    </div>
+                    <div class="column is-4">
+                        <div class="user-input-wrp">
+                            <br />
+                            <input type="text" class="inputText" name="email" id="email" autocomplete="new-password" required />
+                            <span class="floating-label">Email *</span>
+                        </div>
+                    </div>
+                    <div class="column is-4">
+                        <div class="user-input-wrp">
+                            <br />
+                            <input type="text" class="inputText" name="telCel" id="telCel" autocomplete="new-password" required/>
+                            <span class="floating-label">Telefone Celular *</span>
+                        </div>
+                    </div>
+                    <div class="column is-4">
+                        <div class="user-input-wrp">
+                            <br />
+                            <input type="text" class="inputText" name="telFix" id="telFix" autocomplete="new-password" required />
+                            <span class="floating-label">Telefone Fixo *</span>
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                        <div class="user-input-wrp">
+                            <br />
+                            <input type="password" class="inputText" name="novaSenha" id="novaSenha" autocomplete="new-password" required />
+                            <span class="floating-label">Nova Senha (Digite caso queira trocar)</span>
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                        <div class="user-input-wrp">
+                            <br />
+                            <input type="password" class="inputText" name="confirmeNovaSenha" id="confirmeNovaSenha"autocomplete="new-password" required />
+                            <span class="floating-label">Confirme a Nova Senha</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="columns is-multiline is-desktop is-mobile m10px">
+                <div class="column is-8 is-offset-2 has-text-centered ">
+                    <h4 class="title is-4">Endereço</h4>
+                </div>
+                <div class="column is-1 is-offset-1 has-text-centered">
+                    <button type="button" class="button btnTrans is-hidden-mobile btnMeusDados">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="wrapper-body paddingLR" id="endereco" style="display:none;">
+                <div class="columns is-multiline is-desktop is-mobile">
+                    <div class="column is-7">
+                        <div class="user-input-wrp">
+                            <br />
+                            <input type="text" class="inputText" name="logradouro" id="logradouro" placeholder="Digite o CEP para localizar o endereço" autocomplete="new-password" disabled />
+                            <span class="floating-label not-floating-label">Logradouro *</span>
+                        </div>
+                    </div>
+                    <div class="column is-2">
+                        <div class="user-input-wrp">
+                            <br />
+                            <input type="text" class="inputText" name="numero" id="numero" autocomplete="new-password" required />
+                            <span class="floating-label">Número *</span>
+                        </div>
+                    </div>
+                    <div class="column is-3">
+                        <div class="user-input-wrp">
+                            <br />
+                            <input type="text" class="inputText" name="complemento" id="complemento" autocomplete="new-password" required />
+                            <span class="floating-label">Complemento</span>
+                        </div>
+                    </div>
+                    <div class="column is-3">
+                        <div class="user-input-wrp">
+                            <br />
+                            <input type="text" class="inputText" name="bairro" id="bairro" placeholder="--" autocomplete="new-password" disabled />
+                            <span class="floating-label not-floating-label">Bairro *</span>
+                        </div>
+                    </div>
+                    <div class="column is-3">
+                        <div class="user-input-wrp">
+                            <br />
+                            <input type="text" class="inputText" name="cidade" id="cidade" placeholder="--" autocomplete="new-password" disabled />
+                            <span class="floating-label not-floating-label">Cidade *</span>
+                        </div>
+                    </div>
+                    <div class="column is-2">
+                        <div class="user-input-wrp">
+                            <br />
+                            <input type="text" class="inputText" name="estado" id="estado" placeholder="--" autocomplete="new-password" disabled />
+                            <span class="floating-label not-floating-label">Estado *</span>
+                        </div>
+                    </div>
+                    <div class="column is-4">
+                        <div class="user-input-wrp">
+                            <br />
+                            <input type="text" class="inputText" name="cep" id="cep" autocomplete="new-password" required />
+                            <span class="floating-label">CEP *</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <button type="button" class="button btnTrans btnBorder is-pulled-right salvar">
+        <i class="fas fa-check"></i>&nbsp; Salvar
+    </button>
+</div>
+    <script type="text/javascript">
+        "use strict";
+
+        if (window.innerWidth < 769) {
+            $(".wrapper-body").show();
+        }
+
+        $(".btnMeusDados").click(function () {
+            $(".wrapper-body").hide();
+            $(this).closest(".wrapper").find(".wrapper-body").toggle();
+        });
+        $(".voltarDashboard").off().click(function () {
+            voltarDashboard();
+        });
+        $(document).ready(function () {
+            var clienteid = getCookie("clienteid");
+            getAPIContent("/cliente/"+clienteid,{},"loadCliente");
+
+            loadMasks();
+
+            $(".salvar").off().click(function () {
+                var razaoSocial = $("#razaoSocial").val();
+                var cnpj = $("#cnpj").val();
+                var nomeFantasia = $("#nomeFantasia").val();
+                var areaAtuacao = $("#areaAtuacao").val();
+                var site = $("#site").val();
+                var nomeContato = $("#nomeContato").val();
+                var cargo = $("#cargo").val();
+                var email = $("#email").val();
+                var telcel = $("#telcel").val();
+                var telfix = $("#telfix").val();
+                var novaSenha = $("#novaSenha").val();
+                var confirmeNovaSenha = $("#confirmeNovaSenha").val();
+                var logradouro = $("#logradouro").val();
+                var numero = $("#numero").val();
+                var complemento = $("#complemento").val();
+                var bairro = $("#bairro").val();
+                var cidade = $("#cidade").val();
+                var estado = $("#estado").val();
+                var cep = $("#cep").val();
+
+                if (novaSenha != confirmeNovaSenha) {
+                    alert("Senhas não conferem");
+                    return;
+                }
+                
+                var cliente = {
+                    RazaoSocial: razaoSocial,
+                    CNPJ: cnpj,
+                    NomeFantasia: nomeFantasia,
+                    AreaAtuacao: areaAtuacao,
+                    Site: site,
+                    NomeContato: nomeContato,
+                    Cargo: cargo,
+                    Email: email,
+                    TelefoneCelular: telcel,
+                    TelefoneFixo: telfix,
+                    Senha: novaSenha,
+                    Logradouro: logradouro,
+                    Numero: numero,
+                    Complemento: complemento,
+                    Bairro: bairro,
+                    Cidade: cidade,
+                    Estado: estado,
+                    CEP: cep
+                };
+
+                sendContent('cliente','put',cliente,"Cliente Alterado Com Sucesso","Para editar dados do cliente ou cadastrar projetos, clique no botão Visualizar Clientes")
+            });
+        });
+    </script>
