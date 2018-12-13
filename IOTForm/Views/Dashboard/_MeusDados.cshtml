@@ -258,10 +258,9 @@
                     Bairro: bairro,
                     Cidade: cidade,
                     Estado: estado,
-                    CEP: cep,
-                    _method: "put"
+                    CEP: cep
                 };
-                sendContent('cliente','POST',cliente,"Cliente Alterado Com Sucesso","Para editar dados do cliente ou cadastrar projetos, clique no botão Visualizar Clientes")
+                sendContent('cliente/'+getCookie("clienteid"),'PUT',cliente,"Cliente Alterado Com Sucesso","Para editar dados do cliente ou cadastrar projetos, clique no botão Visualizar Clientes")
             });
         });
     </script>
