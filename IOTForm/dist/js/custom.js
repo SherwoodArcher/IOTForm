@@ -110,14 +110,14 @@ function listarProjetos(projetos) {
                     '<div>'+element.Nome+'</div>'+
                 '</div>'+
                 '<div class="column is-2">'+
-                    '<button type="button" class="button btnTrans btnBorder btnFull btnProjeto" data-projeto="'+element.Id+' data-projeto-nome="'+element.Nome+'">'+
+                    '<button type="button" class="button btnTrans btnBorder btnFull btnProjeto" data-projeto-id="'+element.Id+' data-projeto-nome="'+element.Nome+'">'+
                         'Visualizar&nbsp; <i class="fas fa-chevron-right"></i>'+
                     '</button>'+
                 '</div>';
         $("#listaProjetos").append(html);
     });
     $(".btnProjeto").off().click(function () {
-        var projetoid = $(this).data("projeto");
+        var projetoid = $(this).data("projetoId");
         var projetonome = $(this).data("projetoNome");
         setCookie("projetoid",projetoid);
         setCookie("projetonome",projetonome);
