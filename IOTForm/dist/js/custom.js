@@ -14,7 +14,7 @@ function getAPIContent(url, data, callback) {
     if(cliente != ""){
         if(!isEmpty(data)) data.clienteid = cliente;
         $.ajax({
-            url: url,
+            url: "https://iotforms-api.azurewebsites.net/"+url,
             data: data,
             method: 'get',
             success: function (result) {
@@ -227,7 +227,7 @@ function voltarDashboard(){
 }
 
 function voltarLogin(){
-    getContent("/Login");
+    window.location = "/Login";
 }
 
 
