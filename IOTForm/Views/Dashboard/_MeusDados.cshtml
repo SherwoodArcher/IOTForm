@@ -223,8 +223,8 @@
                 var nomeContato = $("#nomeContato").val();
                 var cargo = $("#cargo").val();
                 var email = $("#email").val();
-                var telcel = $("#telcel").val();
-                var telfix = $("#telfix").val();
+                var telcel = $("#telCel").val();
+                var telfix = $("#telFix").val();
                 var novaSenha = $("#novaSenha").val();
                 var confirmeNovaSenha = $("#confirmeNovaSenha").val();
                 var logradouro = $("#logradouro").val();
@@ -242,7 +242,7 @@
                 
                 var cliente = {
                     RazaoSocial: razaoSocial,
-                    CNPJ: cnpj,
+                    Cnpj: cnpj,
                     NomeFantasia: nomeFantasia,
                     AreaAtuacao: areaAtuacao,
                     Site: site,
@@ -250,7 +250,7 @@
                     Cargo: cargo,
                     Email: email,
                     TelefoneCelular: telcel,
-                    TelefoneFixo: telfix,
+                    TelefoneComercial: telfix,
                     Senha: novaSenha,
                     Logradouro: logradouro,
                     Numero: numero,
@@ -260,7 +260,6 @@
                     Estado: estado,
                     CEP: cep
                 };
-
                 sendContent('cliente','put',cliente,"Cliente Alterado Com Sucesso","Para editar dados do cliente ou cadastrar projetos, clique no botão Visualizar Clientes")
             });
         });
