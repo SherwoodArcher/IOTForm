@@ -82,6 +82,8 @@ function isEmpty(data){
     return count == 0;
 }
 
+function isUndefined(variable){return typeof variable === undefined || typeof variable === "undefined" || variable == null;}
+
 function listarClientes(clientes) {
     $("#listaClientes").empty();
     clientes.forEach(function(element) {
