@@ -105,7 +105,7 @@ function listarClientes(clientes) {
 
 function listarProjetos(projetos) {
     $("#listaProjetos").empty();
-    for (var projeto in projetos) {
+    projetos.forEach(function(element) {
         var html = '<div class="column is-10">'+
                     '<div>'+projetos[projeto].nome+'</div>'+
                 '</div>'+
@@ -115,7 +115,7 @@ function listarProjetos(projetos) {
                     '</button>'+
                 '</div>';
         $("#listaProjetos").append(html);
-    }
+    });
     $(".btnProjeto").off().click(function () {
         var projetoid = $(this).data("projeto");
         setCookie("projetoid",projetoid);
