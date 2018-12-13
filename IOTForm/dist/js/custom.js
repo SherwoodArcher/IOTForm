@@ -14,9 +14,9 @@ function getAPIContent(url, data, callback, admin = false) {
     if(user != ""){
         if(!isEmpty(data)) data.ClienteId = user;
         $.ajax({
-            url: "https://iotforms-api.azurewebsites.net"+url,
+            url: "https://iotforms-api.azurewebsites.net" + url,
             data: data,
-            method: 'get',
+            method: 'GET',
             success: function (result) {
                 callback(result);
             },
@@ -84,17 +84,17 @@ function isEmpty(data){
 
 function listarClientes(clientes) {
     $("#listaCliente").empty();
-    for (var cliente in clientes) {
-            var html = '<div class="column is-10">'+
-                        '<div>'+clientes[cliente].nome+'</div>'+
+    clientes.forEach(function(element) {
+        var html = '<div class="column is-10">'+
+                        '<div>'+element.RazaoSocial+'</div>'+
                     '</div>'+
                     '<div class="column is-2">'+
-                        '<button type="button" class="button btnTrans btnBorder btnFull btnCliente" data-cliente="'+clientes[cliente].id+'">'+
+                        '<button type="button" class="button btnTrans btnBorder btnFull btnCliente" data-cliente="'+element.Id+'">'+
                             'Logar Como Cliente&nbsp; <i class="fas fa-chevron-right"></i>'+
                         '</button>'+
                     '</div>';
         $("#listaClientes").append(html);
-    }
+    });
     $(".btnCliente").off().click(function () {
         var clienteid = $(this).data("cliente");
         setCookie("clienteid",clienteid);
