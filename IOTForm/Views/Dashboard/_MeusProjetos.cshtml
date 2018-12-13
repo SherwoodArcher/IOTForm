@@ -47,7 +47,7 @@
         });
         
         $(document).ready(function () {
-            getAPIContent("/projeto/"+getCookie("clienteid"), {},listarProjetos);
+            getAPIContent("/projeto/cliente/"+getCookie("clienteid"), {},listarProjetos);
 
             $("#adicionarProjeto").off().click(function(){
                 var nome = $("#nomeNovoProjeto").val();
