@@ -345,7 +345,7 @@ function showModal(titulo, mensagem) {
 }
 
 function voltarAdmin() {
-    getContent("/Admin/Home",true);
+    getContent("/Admin",true);
 }
 
 function voltarDashboard(){
