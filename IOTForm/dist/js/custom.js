@@ -187,24 +187,15 @@ function sendContent(url, method, data, titulo, mensagem,admin = false) {
     var user = admin ? getCookie("admin"): getCookie("clienteid");
     if(user != ""){
         $.ajax({
-            url: 'https://iotform-api.azurewebsites.net/' + url,
-            data: data,
+            url: "https://iotforms-api.azurewebsites.net/"+url,
             method: method,
-            contentType: "application/json",
-            success: function (result) {
+            data: data,
+            success: function(result) {
                 if (result) {
-                    if (result.code == 1) {
-                        showModal(titulo, mensagem);
-                    } else {
-                        showModal("Erro", result.error);
-                    }
-                } else {
-                    showModal("Erro", "Não foi possivel gravar os dados, tente novamente!");
+                    showModal(titulo, mensagem);
                 }
             },
-            error: function (error) {
-                console.log(error);
-            }
+            error: function(error) { console.log(error); }
         });
     }else{
         voltarLogin();
