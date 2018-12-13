@@ -282,7 +282,7 @@
             QuestionarioRespostas['Resposta' + a] = $("#resposta" + a).prop("checked") ? 1 : 0;
             QuestionarioRespostas['RespostaTexto' + a] = $("#respostatexto" + a).text();
         }
-        sendContent("", QuestionarioRespostas,"Sucesso", "Formulário Geral Gravado Com Sucesso!")
+        sendContent("/questionario", QuestionarioRespostas,"Sucesso", "Formulário Geral Gravado Com Sucesso!")
     }
 
 </script>
