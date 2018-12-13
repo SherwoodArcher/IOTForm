@@ -9,10 +9,10 @@ function deleteCookie(cname){
     document.cookie = cname + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
 
-function getAPIContent(url, data, callback) {
-    var cliente = getCookie("clienteid");
-    if(cliente != ""){
-        if(!isEmpty(data)) data.ClienteId = cliente;
+function getAPIContent(url, data, callback, admin = false) {
+    var user = admin ? getCookie("admin"): getCookie("clienteid");
+    if(user != ""){
+        if(!isEmpty(data)) data.ClienteId = user;
         $.ajax({
             url: "https://iotforms-api.azurewebsites.net"+url,
             data: data,
