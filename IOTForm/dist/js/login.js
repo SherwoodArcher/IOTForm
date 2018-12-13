@@ -3,7 +3,8 @@
         $("#erro").hide();
     })
 
-    $("#formLogin").submit(function () {
+    $("#formLogin").submit(function (e) {
+        e.preventDefault();
         setCookie("admin",0);
         voltarAdmin();
         /* var login = $("#login").val();
