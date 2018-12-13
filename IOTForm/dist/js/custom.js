@@ -130,8 +130,8 @@ function loadCliente(result){
     $("#nomeContato").val(checkValue(result.NomeContato));
     $("#cargo").val(checkValue(result.Cargo));
     $("#email").val(checkValue(result.Email));
-    $("#telcel").val(checkValue(result.TelefoneCelular));
-    $("#telfix").val(checkValue(result.TelefoneFixo));
+    $("#telCel").val(checkValue(result.TelefoneCelular));
+    $("#telFix").val(checkValue(result.TelefoneComercial));
     $("#logradouro").val(checkValue(result.Logradouro));
     $("#numero").val(checkValue(result.Numero));
     $("#complemento").val(checkValue(result.Complemento));
