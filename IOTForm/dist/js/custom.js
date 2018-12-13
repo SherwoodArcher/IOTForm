@@ -83,7 +83,7 @@ function isEmpty(data){
 }
 
 function listarClientes(clientes) {
-    $("#listaCliente").empty();
+    $("#listaClientes").empty();
     clientes.forEach(function(element) {
         var html = '<div class="column is-10">'+
                         '<div>'+element.RazaoSocial+'</div>'+
