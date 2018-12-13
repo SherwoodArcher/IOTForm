@@ -1,8 +1,4 @@
-﻿    body {
-        /* font-family: Segoe UI; */
-    }
-
-    input {
+﻿    input {
         outline: 0 !important;
         border-width: 0 0 2px !important;
         border-color: #BBB !important;
@@ -15,10 +11,6 @@
         border-color: #00BBCF !important;
         color: #FFF !important;
         box-shadow: 0px 0px 0px 0px rgba(0, 187, 207, 1) !important;
-    }
-
-    label{
-         /* font-family: Segoe UI; */
     }
 
     ::-webkit-input-placeholder {
@@ -146,10 +138,6 @@
         color: white !important;
         display: inline-block !important;
         height: 100%;
-    }
-
-    .marginButtonHome {
-
     }
 
     .hoverBlue:hover {

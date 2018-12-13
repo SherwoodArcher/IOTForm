@@ -12,9 +12,9 @@ function deleteCookie(cname){
 function getAPIContent(url, data, callback) {
     var cliente = getCookie("clienteid");
     if(cliente != ""){
-        if(!isEmpty(data)) data.clienteid = cliente;
+        if(!isEmpty(data)) data.ClienteId = cliente;
         $.ajax({
-            url: "https://iotforms-api.azurewebsites.net/"+url,
+            url: "https://iotforms-api.azurewebsites.net"+url,
             data: data,
             method: 'get',
             success: function (result) {
@@ -81,6 +81,7 @@ function isEmpty(data){
     }
     return count == 0;
 }
+
 function listarClientes(clientes) {
     $("#listaCliente").empty();
     for (var cliente in clientes) {
@@ -182,9 +183,9 @@ function logout(){
     }
 }
 
-function sendContent(url, method, data, titulo, mensagem) {
-    var cliente = getCookie("clienteid")
-    if(cliente != ""){
+function sendContent(url, method, data, titulo, mensagem,admin = false) {
+    var user = admin ? getCookie("admin"): getCookie("clienteid");
+    if(user != ""){
         $.ajax({
             url: 'https://iotform-api.azurewebsites.net/' + url,
             data: data,
