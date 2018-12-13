@@ -107,10 +107,10 @@ function listarProjetos(projetos) {
     $("#listaProjetos").empty();
     projetos.forEach(function(element) {
         var html = '<div class="column is-10">'+
-                    '<div>'+element.nome+'</div>'+
+                    '<div>'+element.Nome+'</div>'+
                 '</div>'+
                 '<div class="column is-2">'+
-                    '<button type="button" class="button btnTrans btnBorder btnFull btnProjeto" data-projeto="'+element.id+'">'+
+                    '<button type="button" class="button btnTrans btnBorder btnFull btnProjeto" data-projeto="'+element.Id+'">'+
                         'Ir para Projeto&nbsp; <i class="fas fa-chevron-right"></i>'+
                     '</button>'+
                 '</div>';
