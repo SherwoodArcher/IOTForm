@@ -68,7 +68,8 @@
             voltarDashboard();
         });
         $(document).ready(function () {
-            getAPIContents("");
+            $("#nomeProjeto").text(getCookie("projetonome"));
+            //getAPIContents("");
 
             $("#voltarMeusProjetos").click(function () {
                 getContent("/Dashboard/MeusProjetos");

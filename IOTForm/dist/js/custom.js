@@ -110,7 +110,7 @@ function listarProjetos(projetos) {
                     '<div>'+element.Nome+'</div>'+
                 '</div>'+
                 '<div class="column is-2">'+
-                    '<button type="button" class="button btnTrans btnBorder btnFull btnProjeto" data-projeto="'+element.Id+'">'+
+                    '<button type="button" class="button btnTrans btnBorder btnFull btnProjeto" data-projeto="'+element.Id+' data-nome-projeto="'+element.Nome+'">'+
                         'Visualizar&nbsp; <i class="fas fa-chevron-right"></i>'+
                     '</button>'+
                 '</div>';
@@ -118,7 +118,9 @@ function listarProjetos(projetos) {
     });
     $(".btnProjeto").off().click(function () {
         var projetoid = $(this).data("projeto");
+        var projetonome = $(this).data("projetoNome");
         setCookie("projetoid",projetoid);
+        setCookie("projetonome",projetonome);
         getContent("/Dashboard/Projeto");
     });
 }
