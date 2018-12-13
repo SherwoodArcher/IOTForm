@@ -111,7 +111,7 @@ function listarProjetos(projetos) {
                 '</div>'+
                 '<div class="column is-2">'+
                     '<button type="button" class="button btnTrans btnBorder btnFull btnProjeto" data-projeto="'+element.Id+'">'+
-                        'Ir para Projeto&nbsp; <i class="fas fa-chevron-right"></i>'+
+                        'Visualizar&nbsp; <i class="fas fa-chevron-right"></i>'+
                     '</button>'+
                 '</div>';
         $("#listaProjetos").append(html);

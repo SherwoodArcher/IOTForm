@@ -53,7 +53,7 @@
                 var nome = $("#nomeNovoProjeto").val();
                 var clienteid = getCookie("clienteid");
                 var projeto = {Nome: nome, IdCliente: clienteid}
-                sendContent('projeto','POST',Projeto,"Projeto Cadastrado Com Sucesso","Para editar o projeto, clique no mesmo na lista abaixo", true);
+                sendContent('projeto','POST',projeto,"Projeto Cadastrado Com Sucesso","Para editar o projeto, clique no mesmo na lista abaixo", true);
             });
         });
     </script>
