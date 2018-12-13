@@ -190,6 +190,7 @@ function sendContent(url, method, data, titulo, mensagem,admin = false) {
             url: 'https://iotform-api.azurewebsites.net/' + url,
             data: data,
             method: method,
+            contentType: "application/json",
             success: function (result) {
                 if (result) {
                     if (result.code == 1) {
