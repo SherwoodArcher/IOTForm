@@ -6,7 +6,7 @@
     $("#formLogin").submit(function (e) {
         e.preventDefault();
         setCookie("admin",0);
-        voltarAdmin();
+        window.location = "/Admin";
         /* var login = $("#login").val();
         var senha = $("#senha").val();
         $.ajax({
