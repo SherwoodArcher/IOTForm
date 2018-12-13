@@ -9,6 +9,82 @@ function deleteCookie(cname){
     document.cookie = cname + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
 
+function enviarAtivosDevices() {
+    var geralNumeroAtivos = $("#geralNumeroAtivos").val();
+    var geralNumeroAtivosC = $("#geralNumeroAtivosC").val();
+    var geralValorAtivo = $("#geralValorAtivo").val();
+    var geralValorAtivoC = $("#geralValorAtivoC").val();
+    var geralValorEconomico = $("#geralValorEconomico").val();
+    var geralValorEconomicoC = $("#geralValorEconomicoC").val();
+    var geralComplexidadeAtivo = $("#geralComplexidadeAtivo").val();
+    var geralComplexidadeAtivoC = $("#geralComplexidadeAtivoC").val();
+    var geralHeteroAtivo = $("#geralHeteroAtivo").val();
+    var geralHeteroAtivoC = $("#geralHeteroAtivoC").val();
+
+    var poderLogicaNegocio = $("#poderLogicaNegocio").val();
+    var poderLogicaNegocioC = $("#poderLogicaNegocioC").val();
+    var poderProcessamento = $("#poderProcessamento").val();
+    var poderProcessamentoC = $("#poderProcessamentoC").val();
+    var poderRequerimentos = $("#poderRequerimentos").val();
+    var poderRequerimentosC = $("#poderRequerimentosC").val();
+    var poderGestaoLocal = $("#poderGestaoLocal").val();
+    var poderGestaoLocalC = $("#poderGestaoLocalC").val();
+
+    var outrosFonteEnergia = $("#outrosFonteEnergia").val();
+    var outrosFonteEnergiaC = $("#outrosFonteEnergiaC").val();
+    var outrosAmbiente = $("#outrosAmbiente").val();
+    var outrosAmbienteC = $("#outrosAmbienteC").val();
+
+    var gestaoVidaUtil = $("#gestaoVidaUtil").val();
+    var gestaoVidaUtilC = $("#gestaoVidaUtilC").val();
+    var gestaoRestricoesHardware = $("#gestaoRestricoesHardware").val();
+    var gestaoRestricoesHardwareC = $("#gestaoRestricoesHardwareC").val();
+    var gestaoRestricoesSoftware = $("#gestaoRestricoesSoftware").val();
+    var gestaoRestricoesSoftwareC = $("#gestaoRestricoesSoftwareC").val();
+  
+    var ativosDevices = {
+        GeralNumeroAtivos: geralNumeroAtivos,
+        GeralNumeroAtivosC: geralNumeroAtivosC,
+        GeralValorAtivo: geralValorAtivo,
+        GeralValorAtivoC: geralValorAtivoC,
+        GeralValorEconomico: geralValorEconomico,
+        GeralValorEconomicoC: geralValorEconomicoC,
+        GeralComplexidadeAtivo: geralComplexidadeAtivo,
+        GeralComplexidadeAtivoC: geralComplexidadeAtivoC,
+        GeralHeteroAtivo: geralHeteroAtivo,
+        GeralHeteroAtivoC: geralHeteroAtivoC,
+        PoderLogicaNegocio: poderLogicaNegocio,
+        PoderLogicaNegocioC: poderLogicaNegocioC,
+        PoderProcessamento: poderProcessamento,
+        PoderProcessamentoC: poderProcessamentoC,
+        PoderRequerimentos: poderRequerimentos,
+        PoderRequerimentosC: poderRequerimentosC,
+        PoderGestaoLocal: poderGestaoLocal,
+        PoderGestaoLocalC: poderGestaoLocalC,
+        OutrosFonteEnergia: outrosFonteEnergia,
+        OutrosFonteEnergiaC: outrosFonteEnergiaC,
+        OutrosAmbiente: outrosAmbiente,
+        OutrosAmbienteC: outrosAmbienteC,
+        GestaoVidaUtil: gestaoVidaUtil,
+        GestaoVidaUtilC: gestaoVidaUtilC,
+        GestaoRestricoesHardware: gestaoRestricoesHardware,
+        GestaoRestricoesHardwareC: gestaoRestricoesHardwareC,
+        GestaoRestricoesSoftware: gestaoRestricoesSoftware,
+        GestaoRestricoesSoftwareC: gestaoRestricoesSoftwareC
+    };
+    console.log(ativosDevices);
+    sendContent("ativosDevices", "POST", ativosDevices, "Sucesso", "Track & Trace - Ativos e Devices Gravado Com Sucesso!");
+}
+
+function enviarFormularioGeral() {
+    var QuestionarioRespostas = {};
+    for (var a = 1; a < 11; a++) {
+        QuestionarioRespostas['Resposta' + a] = $("#resposta" + a).prop("checked") ? 1 : 0;
+        QuestionarioRespostas['RespostaTexto' + a] = $("#respostatexto" + a).text();
+    }
+    sendContent("/questionario", "POST", QuestionarioRespostas, "Sucesso", "Formulário Geral Gravado Com Sucesso!")
+}
+
 function getAPIContent(url, data, callback, admin = false) {
     var user = admin ? getCookie("admin"): getCookie("clienteid");
     if(user != ""){
@@ -123,6 +199,41 @@ function listarProjetos(projetos) {
         setCookie("projetonome",projetonome);
         getContent("/Dashboard/Projeto");
     });
+}
+
+function loadAtivosDevices(result){
+    $('#geralNumeroAtivos option[value="'+result.geralNumeroAtivos+'"]').attr('selected', 'selected')
+    $("#geralNumeroAtivosC").val(result.geralNumeroAtivosC);
+    $('#geralValorAtivo option[value="'+result.geralValorAtivo+'"]').attr('selected', 'selected')
+    $("#geralValorAtivoC").val(result.geralValorAtivoC);
+    $('#geralValorEconomico option[value="'+result.geralValorEconomico+'"]').attr('selected', 'selected')
+    $("#geralValorEconomicoC").val(result.geralValorEconomicoC);
+    $('#geralComplexidadeAtivo option[value="'+result.geralComplexidadeAtivo+'"]').attr('selected', 'selected')
+    $("#geralComplexidadeAtivoC").val(result.geralComplexidadeAtivoC);
+    $('#geralHeteroAtivo option[value="'+result.geralHeteroAtivo+'"]').attr('selected', 'selected')
+    $("#geralHeteroAtivoC").val(result.geralHeteroAtivoC);
+
+    $('#poderLogicaNegocio option[value="'+result.poderLogicaNegocio+'"]').attr('selected', 'selected')
+    $("#poderLogicaNegocioC").val(result.poderLogicaNegocioC);
+    $('#poderProcessamento option[value="'+result.poderProcessamento+'"]').attr('selected', 'selected')
+    $("#poderProcessamentoC").val(result.poderProcessamentoC);
+    $('#poderRequerimentos option[value="'+result.poderRequerimentos+'"]').attr('selected', 'selected')
+    $("#poderRequerimentosC").val(result.poderRequerimentosC);
+    $('#poderGestaoLocal option[value="'+result.poderGestaoLocal+'"]').attr('selected', 'selected')
+    $("#poderGestaoLocalC").val(result.poderGestaoLocalC);
+
+    $('#outrosFonteEnergia option[value="'+result.outrosFonteEnergia+'"]').attr('selected', 'selected')
+    $("#outrosFonteEnergiaC").val(result.outrosFonteEnergiaC);
+    $('#outrosAmbiente option[value="'+result.outrosAmbiente+'"]').attr('selected', 'selected')
+    $("#outrosAmbienteC").val(result.outrosAmbienteC);
+
+    $('#gestaoVidaUtil option[value="'+result.gestaoVidaUtil+'"]').attr('selected', 'selected')
+    $("#gestaoVidaUtilC").val(result.gestaoVidaUtilC);
+    $('#gestaoRestricoesHardware option[value="'+result.gestaoRestricoesHardware+'"]').attr('selected', 'selected')
+    $("#gestaoRestricoesHardwareC").val(result.gestaoRestricoesHardwareC);
+    $("#gestaoRestricoesSoftware").val(result.gestaoRestricoesSoftware);
+    $('#gestaoRestricoesSoftware option[value="'+result.gestaoRestricoesSoftware+'"]').attr('selected', 'selected')
+    $("#gestaoRestricoesSoftwareC").val(result.gestaoRestricoesSoftwareC);
 }
 
 function loadCliente(result){
@@ -244,5 +355,4 @@ function voltarDashboard(){
 function voltarLogin(){
     window.location = "/Login";
 }
-
 
