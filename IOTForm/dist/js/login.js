@@ -7,7 +7,7 @@
         var login = $("#login").val();
         var senha = $("#senha").val();
         $.ajax({
-            url: "../../api/Cliente/Logar",
+            url: "https://iotforms-api.azurewebsites.net/",
             data: { login: login, senha: senha },
             method: 'post',
             contentType: "application/json",

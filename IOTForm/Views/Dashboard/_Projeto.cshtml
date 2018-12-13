@@ -64,15 +64,12 @@
 <script type="text/javascript">
         "use strict";
 
-        if (window.innerWidth < 769) {
-
-        }
-
-
         $(".voltarDashboard").off().click(function () {
             voltarDashboard();
         });
         $(document).ready(function () {
+            getAPIContents("");
+
             $("#voltarMeusProjetos").click(function () {
                 getContent("/Dashboard/MeusProjetos");
             });
