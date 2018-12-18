@@ -9,6 +9,18 @@ function deleteCookie(cname){
     document.cookie = cname + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
 
+function entrarSistema(){
+    var clienteid = getCookie("clienteid");
+    var location;
+    if(parseInt(clienteid) == 0){
+        setCookie("admin",0);
+        location = "/Admin";
+    }else{
+        location = "/Dashboard";
+    }
+    window.location = location;
+}
+
 function enviarAtivosDevices() {
     var geralNumeroAtivos = $("#geralNumeroAtivos").val();
     var geralNumeroAtivosC = $("#geralNumeroAtivosC").val();

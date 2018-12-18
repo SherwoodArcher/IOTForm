@@ -13,6 +13,8 @@
             method: 'POST',
             success: function (result) {
                 setCookie("token",result.token);
+                setCookie("clienteid",result.IdCliente)
+                entrarSistema();
             },
             error: function (error) {
                 $("#erro").show();
