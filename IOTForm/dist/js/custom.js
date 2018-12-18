@@ -12,7 +12,7 @@ function deleteCookie(cname){
 function entrarSistema(){
     var clienteid = getCookie("clienteid");
     var location;
-    if(parseInt(clienteid) == 0){
+    if(clienteid == 0){
         setCookie("admin",0);
         location = "/Admin";
     }else{
@@ -301,9 +301,11 @@ function logout(){
         if(admin != ""){
             voltarAdmin();
         }else{
+            deleteCookie("token");
             voltarLogin();
         }
     }else{
+        deleteCookie("token");
         deleteCookie("admin");
         voltarLogin();
     }
