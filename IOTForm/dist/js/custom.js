@@ -23,6 +23,7 @@ function entrarSistema(){
 }
 
 function enviarAtivosDevices() {
+    var idprojeto = getCookie("projetoid");
     var geralNumeroAtivos = $("#geralNumeroAtivos").val();
     var geralNumeroAtivosC = $("#geralNumeroAtivosC").val();
     var geralValorAtivo = $("#geralValorAtivo").val();
@@ -56,6 +57,7 @@ function enviarAtivosDevices() {
     var gestaoRestricoesSoftwareC = $("#gestaoRestricoesSoftwareC").val();
   
     var ativosDevices = {
+        IdProjeto: idprojeto,
         GeralNumeroAtivos: geralNumeroAtivos,
         GeralNumeroAtivosC: geralNumeroAtivosC,
         GeralValorAtivo: geralValorAtivo,
@@ -89,8 +91,43 @@ function enviarAtivosDevices() {
     sendContent("ativosDevices", "POST", ativosDevices, "Sucesso", "Track & Trace - Ativos e Devices Gravado Com Sucesso!");
 }
 
+function enviarComunicacaoConectividade() {
+    var idprojeto = getCookie("projetoid");
+    var localTecnologia = $("#localTecnologia").val();
+    var localTecnologiaC = $("#localTecnologiaC").val();
+    var localLarguraBanda = $("#localLarguraBanda").val();
+    var localLarguraBandaC = $("#localLarguraBandaC").val();
+    var localMaximaLatencia = $("#localMaximaLatencia").val();
+    var localMaximaLatenciaC = $("#localMaximaLatenciaC").val();
+    var remotaTecnologia = $("#remotaTecnologia").val();
+    var remotaTecnologiaC = $("#remotaTecnologiaC").val();
+    var remotaLarguraBanda = $("#remotaLarguraBanda").val();
+    var remotaLarguraBandaC = $("#remotaLarguraBandaC").val();
+    var remotaMaximaLatencia = $("#remotaMaximaLatencia").val();
+    var remotaMaximaLatenciaC = $("#remotaMaximaLatenciaC").val();
+    
+
+    var comunicacaoConectividade = {
+        IdProjeto: idprojeto,
+        LocalTecnologia: localTecnologia,
+        LocalTecnologiaC: localTecnologiaC,
+        LocalLarguraBanda: localLarguraBanda,
+        LocalLarguraBandaC: localLarguraBandaC,
+        LocalMaximaLatencia: localMaximaLatencia,
+        LocalMaximaLatenciaC: localMaximaLatenciaC,
+        RemotaTecnologia: remotaTecnologia,
+        RemotaTecnologiaC: remotaTecnologiaC,
+        RemotaLarguraBanda: remotaLarguraBanda,
+        RemotaLarguraBandaC: remotaLarguraBandaC,
+        RemotaMaximaLatencia: remotaMaximaLatencia,
+        RemotaMaximaLatenciaC: remotaMaximaLatenciaC
+    };
+    sendContent("comConect", "POST", comunicacaoConectividade, "Sucesso", "Track & Trace - Comunicação e Conectividade Gravado Com Sucesso!")
+}
+
 function enviarFormularioGeral() {
-    var QuestionarioRespostas = {};
+    var idprojeto = getCookie("projetoid");
+    var QuestionarioRespostas = {IdProjeto: idprojeto};
     for (var a = 1; a < 11; a++) {
         QuestionarioRespostas['Resposta' + a] = $("#resposta" + a).prop("checked") ? 1 : 0;
         QuestionarioRespostas['RespostaTexto' + a] = $("#respostatexto" + a).text();

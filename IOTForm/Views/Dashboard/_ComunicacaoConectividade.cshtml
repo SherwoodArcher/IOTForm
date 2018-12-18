@@ -158,39 +158,5 @@
         });
     });
 
-    function enviarComunicacaoConectividade() {
-      
-        var localTecnologia = $("#localTecnologia").val();
-        var localTecnologiaC = $("#localTecnologiaC").val();
-        var localLarguraBanda = $("#localLarguraBanda").val();
-        var localLarguraBandaC = $("#localLarguraBandaC").val();
-        var localMaximaLatencia = $("#localMaximaLatencia").val();
-        var localMaximaLatenciaC = $("#localMaximaLatenciaC").val();
-        var remotaTecnologia = $("#remotaTecnologia").val();
-        var remotaTecnologiaC = $("#remotaTecnologiaC").val();
-        var remotaLarguraBanda = $("#remotaLarguraBanda").val();
-        var remotaLarguraBandaC = $("#remotaLarguraBandaC").val();
-        var remotaMaximaLatencia = $("#remotaMaximaLatencia").val();
-        var remotaMaximaLatenciaC = $("#remotaMaximaLatenciaC").val();
-        
-
-        var comunicacaoConectividade = {
-            LocalTecnologia: localTecnologia,
-            LocalTecnologiaC: localTecnologiaC,
-            LocalLarguraBanda: localLarguraBanda,
-            LocalLarguraBandaC: localLarguraBandaC,
-            LocalMaximaLatencia: localMaximaLatencia,
-            LocalMaximaLatenciaC: localMaximaLatenciaC,
-            RemotaTecnologia: remotaTecnologia,
-            RemotaTecnologiaC: remotaTecnologiaC,
-            RemotaLarguraBanda: remotaLarguraBanda,
-            RemotaLarguraBandaC: remotaLarguraBandaC,
-            RemotaMaximaLatencia: remotaMaximaLatencia,
-            RemotaMaximaLatenciaC: remotaMaximaLatenciaC
-        };
-        console.log(comunicacaoConectividade);
-        sendContent("comConect", "POST", comunicacaoConectividade, "Sucesso", "Track & Trace - Comunicação e Conectividade Gravado Com Sucesso!")
-    }
-
 </script>
 
