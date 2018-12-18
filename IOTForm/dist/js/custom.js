@@ -86,9 +86,8 @@ function enviarFormularioGeral() {
 }
 
 function getAPIContent(url, data, callback, admin = false) {
-    var user = admin ? getCookie("admin"): getCookie("clienteid");
-    if(user != ""){
-        if(!isEmpty(data)) data.ClienteId = user;
+    var token = getCookie("token");
+    if(token != ""){
         $.ajax({
             url: "https://iotforms-api.azurewebsites.net" + url,
             data: data,
@@ -122,11 +121,11 @@ function getCookie(cname) {
 }
 
 function getContent(url, admin = false) {
-    var user = admin ? getCookie("admin"): getCookie("clienteid");
-    if(user != ""){
+    var token = getCookie("token");
+    if(token != ""){
         $.ajax({
             url: url,
-            method: 'get',
+            method: 'GET',
             success: function (result) {
                 $("#conteudo").html(result);
             },
@@ -299,8 +298,8 @@ function logout(){
 }
 
 function sendContent(url, method, data, titulo, mensagem,admin = false) {
-    var user = admin ? getCookie("admin"): getCookie("clienteid");
-    if(user != ""){
+    var token = getCookie("token");
+    if(token != ""){
         $.ajax({
             url: "https://iotforms-api.azurewebsites.net/"+url,
             method: method,

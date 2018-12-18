@@ -5,22 +5,19 @@
 
     $("#formLogin").submit(function (e) {
         e.preventDefault();
-        setCookie("admin",0);
-        window.location = "/Admin";
-        /* var login = $("#login").val();
+        var login = $("#login").val();
         var senha = $("#senha").val();
         $.ajax({
             url: "https://iotforms-api.azurewebsites.net/login",
             data: { email: login, senha: senha },
             method: 'POST',
             success: function (result) {
-                var cookiename = result.IdCliente == 0 ? "clienteid" : "admin" ;
-                setCookie(cookiename,result.clienteid);
+                setCookie("token",result.token);
             },
             error: function (error) {
                 $("#erro").show();
             } 
-        });*/
+        });
     })
 });
 
