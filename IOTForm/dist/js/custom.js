@@ -143,7 +143,9 @@ function getAPIContent(url, data, callback) {
             data: data,
             method: 'GET',
             success: function (result) {
-                callback(result);
+                if(!isUndefined(result)){
+                    callback(result);
+                }
             },
             error: function (error) {
                 console.log(error);
