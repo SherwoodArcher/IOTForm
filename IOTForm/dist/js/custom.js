@@ -392,6 +392,7 @@ function showModal(titulo, mensagem, location) {
         if (location) {
             getContent(location);
         } else {
+            var projetoid = getCookie("projetoid");
             getContent("/Dashboard/Projeto/"+projetoid);
         }
     });
