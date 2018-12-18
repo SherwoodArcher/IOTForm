@@ -14,6 +14,7 @@ function entrarSistema(){
     var location;
     if(clienteid == 0){
         setCookie("admin",0);
+        deleteCookie("clienteid");
         location = "/Admin";
     }else{
         location = "/Dashboard";
@@ -311,7 +312,7 @@ function logout(){
     }
 }
 
-function sendContent(url, method, data, titulo, mensagem,admin = false) {
+function sendContent(url, method, data, titulo, mensagem, location = false) {
     var token = getCookie("token");
     if(token != ""){
         $.ajax({
@@ -320,7 +321,7 @@ function sendContent(url, method, data, titulo, mensagem,admin = false) {
             data: data,
             success: function(result) {
                 if (result) {
-                    showModal(titulo, mensagem);
+                    showModal(titulo, mensagem, location);
                 }
             },
             error: function(error) { console.log(error); }
@@ -343,13 +344,13 @@ function setCookie(cname, cvalue) {
     }
 }
 
-function showModal(titulo, mensagem) {
+function showModal(titulo, mensagem, location) {
     $(".modal-card-title").text(titulo);
     $(".modal-card-body").text(mensagem);
     $(".modal-close-btn").off().click(function () {
         $(".modal").hide();
-        if (admin) {
-            voltarAdmin()
+        if (location) {
+            getContent(location);
         } else {
             getContent("/Dashboard/Projeto/"+projetoid);
         }
