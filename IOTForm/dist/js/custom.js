@@ -95,7 +95,7 @@ function enviarFormularioGeral() {
         QuestionarioRespostas['Resposta' + a] = $("#resposta" + a).prop("checked") ? 1 : 0;
         QuestionarioRespostas['RespostaTexto' + a] = $("#respostatexto" + a).text();
     }
-    sendContent("/questionario", "POST", QuestionarioRespostas, "Sucesso", "Formulário Geral Gravado Com Sucesso!")
+    sendContent("questionario", "POST", QuestionarioRespostas, "Sucesso", "Formulário Geral Gravado Com Sucesso!")
 }
 
 function getAPIContent(url, data, callback) {
