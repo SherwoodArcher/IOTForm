@@ -210,7 +210,7 @@
         });
         $(document).ready(function () {
             var clienteid = getCookie("clienteid");
-            getAPIContent("/cliente/"+clienteid,{},loadCliente);
+            getAPIContent("cliente/"+clienteid,{},loadCliente);
 
             loadMasks();
 

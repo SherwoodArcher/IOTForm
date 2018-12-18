@@ -98,11 +98,11 @@ function enviarFormularioGeral() {
     sendContent("/questionario", "POST", QuestionarioRespostas, "Sucesso", "Formulário Geral Gravado Com Sucesso!")
 }
 
-function getAPIContent(url, data, callback, admin = false) {
+function getAPIContent(url, data, callback) {
     var token = getCookie("token");
     if(token != ""){
         $.ajax({
-            url: "https://iotforms-api.azurewebsites.net" + url,
+            url: "https://iotforms-api.azurewebsites.net/" + url,
             data: data,
             method: 'GET',
             success: function (result) {
@@ -268,6 +268,9 @@ function loadCliente(result){
     $("#cep").val(checkValue(result.CEP));
 }
 
+function loadComunicacaoConectividade(result){
+
+}
 function loadMasks(){
     $("#cnpj").mask("00.000.000/0000-00", { reverse: true });
     $("#telCel").mask("(00) 00000-0000");

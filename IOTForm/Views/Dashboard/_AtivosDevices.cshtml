@@ -345,6 +345,6 @@
         $(".salvar").off().click(function () {
             enviarAtivosDevices();
         });
-        loadAtivosDevices();
+        getAPIContent("ativosDevices"/+getCookie("projetoid"), {},"loadAtivosDevices");
     });
 </script>

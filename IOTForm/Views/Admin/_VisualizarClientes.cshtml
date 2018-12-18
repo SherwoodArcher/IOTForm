@@ -48,7 +48,7 @@
     $(document).ready(function () {
         $("#buscarClienteBtn").click(function(){
             var pesquisa = $("#nomeCliente").val();
-            getAPIContent("/cliente",{nome: pesquisa},listarClientes,true);
+            getAPIContent("cliente",{nome: pesquisa},listarClientes,true);
         });
 
     });
