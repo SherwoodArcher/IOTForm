@@ -446,16 +446,22 @@ function loadFormularioGeral(result){
     $("#respostatexto10").val(checkValue(result.RespostaTexto10));
 }
 
-function loadGrafico(){
+function loadGrafico(result){
     var ctx = $("#grafico");
-    var data = [];
+    var data  = [
+        result.AtivosDevice.Medias.Total,
+        result.ComunicacaoConectividade.Medias.Total,
+        result.ServicosBackend.Medias.Total,
+        result.PadroesRequerimento.Medias.Total,
+        result.AmbienteProjeto.Medias.Total
+    ];
     var myRadarChart = new Chart(ctx, {
         type: 'radar',
         data: {
             labels: ["Ativos", "Comunicação", "Backend", "Padrões", "Ambiente"],
             datasets: [{
                 label:"Projeto",
-                data: [1.5, 2, 3, 4, 1],
+                data: data,
                 fill:true,
                 backgroundColor:"rgba(255, 99, 132, 0.2)",
                 borderColor:"rgb(255, 99, 132)",

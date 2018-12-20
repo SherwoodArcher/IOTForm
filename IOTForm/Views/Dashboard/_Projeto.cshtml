@@ -98,7 +98,7 @@
             $("#btnAmbienteProjeto").click(function () {
                 getContent("/Dashboard/AmbienteProjeto");
             });
-            loadGrafico();
+            getAPIContent("relatorios/"+getCookie("projetoid"), {},"loadGrafico");
         });
        
 
