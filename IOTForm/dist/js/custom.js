@@ -452,17 +452,17 @@ function loadGrafico(){
     var myRadarChart = new Chart(ctx, {
         type: 'radar',
         data: {
-            labels: ["Ativos e Devices", "Comunicação e Conectividade", "Serviços Backend", "Padrões & Requerimentos regulatórios", "Ambiente de projeto"],
+            labels: ["Ativos", "Comunicação", "Backend", "Padrões", "Ambiente"],
             datasets: [{
                 label:"Projeto",
-                data: [1, 2, 3, 4, 1],
+                data: [1.5, 2, 3, 4, 1],
                 fill:true,
-                backgroundColor:rgba(255, 99, 132, 0.2),
-                borderColor:rgb(255, 99, 132),
-                pointBackgroundColor:rgb(255, 99, 132),
+                backgroundColor:"rgba(255, 99, 132, 0.2)",
+                borderColor:"rgb(255, 99, 132)",
+                pointBackgroundColor:"rgb(255, 99, 132)",
                 pointBorderColor:"#fff",
                 pointHoverBackgroundColor:"#fff",
-                pointHoverBorderColor:rgb(255, 99, 132)
+                pointHoverBorderColor:"rgb(255, 99, 132)"
             }]
         },
         options: {

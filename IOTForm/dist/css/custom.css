@@ -316,13 +316,20 @@
         color: white;
     }
 
-     option{
-        width: 100%;
-        background-color: transparent;
-        color: black !important;
-     }
+    option{
+    width: 100%;
+    background-color: transparent;
+    color: black !important;
+    }
 
-     #listaClientes{
-         overflow-y: scroll;
-         max-height: 50vh;
-     }
+    #listaClientes{
+        overflow-y: scroll;
+        max-height: 50vh;
+    }
+
+    #graficoProjeto{
+        max-width: 400px;
+        max-height: 400px;
+        padding: 5px;
+        background-color: white;
+    }
