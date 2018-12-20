@@ -89,7 +89,6 @@
         </div>
     </form>
 </div>
-
 <script type="text/javascript">
     "use strict";
     $(document).ready(function () {
@@ -99,28 +98,6 @@
         $(".salvar").off().click(function () {
             enviarAmbienteProjeto();
         });
+        getAPIContent("ambienteProjeto/"+getCookie("projetoid"), {},"loadAmbienteProjeto");
     });
-
-    function enviarAmbienteProjeto() {
-        var ambienteTempo = $("#ambienteTempo").val();
-        var ambienteTempoC = $("#ambienteTempoC").val();
-        var ambienteBudget = $("#ambienteBudget").val();
-        var ambienteBudgetC = $("#ambienteBudgetC").val();
-        var ambienteFuncionais = $("#ambienteFuncionais").val();
-        var ambienteFuncionaisC = $("#ambienteFuncionaisC").val();
-        var ambienteTecnicas = $("#ambienteTecnicas").val();
-        var ambienteTecnicasC = $("#ambienteTecnicasC").val();
-        var ambienteProjeto = {
-            AmbienteTempo: ambienteTempo,
-            AmbienteTempoC: ambienteTempoC,
-            AmbienteBudget: ambienteBudget,
-            AmbienteBudgetC: ambienteBudgetC,
-            AmbienteFuncionais: ambienteFuncionais,
-            AmbienteFuncionaisC: ambienteFuncionaisC,
-            AmbienteTecnicas: ambienteTecnicas,
-            AmbienteTecnicasC: ambienteTecnicasC
-        };
-        sendContent("", ambienteProjeto,"Sucesso", "Track & Trace - Ambiente de Projeto Gravado Com Sucesso!")
-    }
-
 </script>

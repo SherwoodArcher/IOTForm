@@ -22,6 +22,30 @@ function entrarSistema(){
     window.location = location;
 }
 
+function enviarAmbienteProjeto() {
+    var idprojeto = getCookie("projetoid");
+    var ambienteTempo = $("#ambienteTempo").val();
+    var ambienteTempoC = $("#ambienteTempoC").val();
+    var ambienteBudget = $("#ambienteBudget").val();
+    var ambienteBudgetC = $("#ambienteBudgetC").val();
+    var ambienteFuncionais = $("#ambienteFuncionais").val();
+    var ambienteFuncionaisC = $("#ambienteFuncionaisC").val();
+    var ambienteTecnicas = $("#ambienteTecnicas").val();
+    var ambienteTecnicasC = $("#ambienteTecnicasC").val();
+    var ambienteProjeto = {
+        IdProjeto: idprojeto,
+        AmbienteTempo: ambienteTempo,
+        AmbienteTempoC: ambienteTempoC,
+        AmbienteBudget: ambienteBudget,
+        AmbienteBudgetC: ambienteBudgetC,
+        AmbienteFuncionais: ambienteFuncionais,
+        AmbienteFuncionaisC: ambienteFuncionaisC,
+        AmbienteTecnicas: ambienteTecnicas,
+        AmbienteTecnicasC: ambienteTecnicasC
+    };
+    sendContent("ambienteProjeto", "POST", ambienteProjeto,"Sucesso", "Track & Trace - Ambiente de Projeto Gravado Com Sucesso!")
+}
+
 function enviarAtivosDevices() {
     var idprojeto = getCookie("projetoid");
     var geralNumeroAtivos = $("#geralNumeroAtivos").val();
@@ -87,7 +111,6 @@ function enviarAtivosDevices() {
         GestaoRestricoesSoftware: gestaoRestricoesSoftware,
         GestaoRestricoesSoftwareC: gestaoRestricoesSoftwareC
     };
-    console.log(ativosDevices);
     sendContent("ativosDevices", "POST", ativosDevices, "Sucesso", "Track & Trace - Ativos e Devices Gravado Com Sucesso!");
 }
 
@@ -105,7 +128,6 @@ function enviarComunicacaoConectividade() {
     var remotaLarguraBandaC = $("#remotaLarguraBandaC").val();
     var remotaMaximaLatencia = $("#remotaMaximaLatencia").val();
     var remotaMaximaLatenciaC = $("#remotaMaximaLatenciaC").val();
-    
 
     var comunicacaoConectividade = {
         IdProjeto: idprojeto,
@@ -133,6 +155,72 @@ function enviarFormularioGeral() {
         QuestionarioRespostas['RespostaTexto' + a] = $("#respostatexto" + a).text();
     }
     sendContent("questionario", "POST", QuestionarioRespostas, "Sucesso", "Formulário Geral Gravado Com Sucesso!")
+}
+
+function enviarPadroesRequerimentos() {
+    var idprojeto = getCookie("projetoid");
+    var requerimentosRegiao = $("#requerimentosRegiao").val();
+    var requerimentosRegiaoC = $("#requerimentosRegiaoC").val();
+    var requerimentosIndustria = $("#requerimentosIndustria").val();
+    var requerimentosIndustriaC = $("#requerimentosIndustriaC").val();
+    var requerimentosTecnologia = $("#requerimentosTecnologia").val();
+    var requerimentosTecnologiaC = $("#requerimentosTecnologiaC").val();
+    var padroesTecnicos = $("#padroesTecnicos").val();
+    var padroesTecnicosC = $("#padroesTecnicosC").val();
+    var padroesFuncionais = $("#padroesFuncionais").val();
+    var padroesFuncionaisC = $("#padroesFuncionaisC").val();
+
+    var padroesRequerimentos = {
+        IdProjeto: idprojeto,
+        RequerimentosRegiao: requerimentosRegiao,
+        RequerimentosRegiaoC: requerimentosRegiaoC,
+        RequerimentosIndustria: requerimentosIndustria,
+        RequerimentosIndustriaC: requerimentosIndustriaC,
+        RequerimentosTecnologia: requerimentosTecnologia,
+        RequerimentosTecnologiaC: requerimentosTecnologiaC,
+        PadroesTecnicos: padroesTecnicos,
+        PadroesTecnicosC: padroesTecnicosC,
+        PadroesFuncionais: padroesFuncionais,
+        PadroesFuncionaisC: padroesFuncionaisC
+    };
+    sendContent("padroes", "POST", padroesRequerimentos, "Sucesso", "Track & Trace - Padrões e Requerimentos Gravado Com Sucesso!")
+}
+
+function enviarServicosBackend() {
+    var idprojeto = getCookie("projetoid");
+    var geralEstrategiaAplicacao = $("#geralEstrategiaAplicacao").val();
+    var geralEstrategiaAplicacaoC = $("#geralEstrategiaAplicacaoC").val();
+    var geralComplexidadeNegocio = $("#geralComplexidadeNegocio").val();
+    var geralComplexidadeNegocioC = $("#geralComplexidadeNegocioC").val();
+    var geralIntegracaoBackend = $("#geralIntegracaoBackend").val();
+    var geralIntegracaoBackendC = $("#geralIntegracaoBackendC").val();
+    var gestaoVolumeDados = $("#gestaoVolumeDados").val();
+    var gestaoVolumeDadosC = $("#gestaoVolumeDadosC").val();
+    var gestaoVariedadeDados = $("#gestaoVariedadeDados").val();
+    var gestaoVariedadeDadosC = $("#gestaoVariedadeDadosC").val();
+    var gestaoVariabilidadeDados = $("#gestaoVariabilidadeDados").val();
+    var gestaoVariabilidadeDadosC = $("#gestaoVariabilidadeDadosC").val();
+    var gestaoAnalytics = $("#gestaoAnalytics").val();
+    var gestaoAnalyticsC = $("#gestaoAnalyticsC").val();
+
+    var servicosBackend = {
+        IdProjeto: idprojeto,
+        GeralEstrategiaAplicacao: geralEstrategiaAplicacao,
+        GeralEstrategiaAplicacaoC: geralEstrategiaAplicacaoC,
+        GeralComplexidadeNegocio: geralComplexidadeNegocio,
+        GeralComplexidadeNegocioC: geralComplexidadeNegocioC,
+        GeralIntegracaoBackend: geralIntegracaoBackend,
+        GeralIntegracaoBackendC: geralIntegracaoBackendC,
+        GestaoVolumeDados: gestaoVolumeDados,
+        GestaoVolumeDadosC: gestaoVolumeDadosC,
+        GestaoVariedadeDados: gestaoVariedadeDados,
+        GestaoVariedadeDadosC: gestaoVariedadeDadosC,	
+        GestaoVariabilidadeDados: gestaoVariabilidadeDados,
+        GestaoVariabilidadeDadosC: gestaoVariabilidadeDadosC,
+        GestaoAnalytics: gestaoAnalytics,
+        GestaoAnalyticsC: gestaoAnalyticsC
+    };
+    sendContent("servicos", "POST", servicosBackend, "Sucesso", "Track & Trace - Serviços Backend Gravado Com Sucesso!")
 }
 
 function getAPIContent(url, data, callback) {
@@ -209,7 +297,9 @@ function isEmpty(data){
     return count == 0;
 }
 
-function isUndefined(variable){return typeof variable === undefined || typeof variable === "undefined" || variable == null;}
+function isUndefined(variable){
+    return typeof variable === undefined || typeof variable === "undefined" || variable == null;
+}
 
 function listarClientes(clientes) {
     $("#listaClientes").empty();
@@ -250,6 +340,17 @@ function listarProjetos(projetos) {
         setCookie("projetonome",projetonome);
         getContent("/Dashboard/Projeto");
     });
+}
+
+function loadAmbienteProjeto(result){
+    $('#ambienteTempo option[value="'+result.AmbienteTempo+'"]').attr('selected', 'selected')
+    $("#ambienteTempoC").val(result.AmbienteTempoC);
+    $('#ambienteBudget option[value="'+result.AmbienteBudget+'"]').attr('selected', 'selected')
+    $("#ambienteBudgetC").val(result.AmbienteBudget);
+    $('#ambienteFuncionais option[value="'+result.AmbienteFuncionais+'"]').attr('selected', 'selected')
+    $("#ambienteFuncionaisC").val(result.AmbienteFuncionaisC);
+    $('#ambienteTecnicas option[value="'+result.AmbienteFuncionaisC+'"]').attr('selected', 'selected')
+    $("#ambienteTecnicasC").val(result.AmbienteTecnicasC);
 }
 
 function loadAtivosDevices(result){
@@ -308,7 +409,18 @@ function loadCliente(result){
 }
 
 function loadComunicacaoConectividade(result){
-
+    $('#localTecnologia option[value="'+result.LocalTecnologia+'"]').attr('selected', 'selected')
+    $("#localTecnologiaC").val(result.LocalTecnologiaC);
+    $('#localLarguraBanda option[value="'+result.LocalLarguraBanda+'"]').attr('selected', 'selected')
+    $("#localLarguraBandaC").val(result.LocalLarguraBandaC);
+    $('#localMaximaLatencia option[value="'+result.LocalMaximaLatencia+'"]').attr('selected', 'selected')
+    $("#localMaximaLatenciaC").val(result.LocalMaximaLatenciaC);
+    $('#remotaTecnologia option[value="'+result.RemotaTecnologia+'"]').attr('selected', 'selected')
+    $("#remotaTecnologiaC").val(result.RemotaTecnologiaC);
+    $('#remotaLarguraBanda option[value="'+result.RemotaLarguraBanda+'"]').attr('selected', 'selected')
+    $("#remotaLarguraBandaC").val(result.RemotaLarguraBandaC);
+    $('#remotaMaximaLatencia option[value="'+result.RemotaMaximaLatencia+'"]').attr('selected', 'selected')
+    $("#remotaMaximaLatenciaC").val(result.RemotaMaximaLatenciaC);
 }
 
 function loadFormularioGeral(result){
@@ -332,6 +444,66 @@ function loadFormularioGeral(result){
     $("#respostatexto9").val(checkValue(result.RespostaTexto9));
     $("#resposta10").prop("checked",result.Resposta10);
     $("#respostatexto10").val(checkValue(result.RespostaTexto10));
+}
+
+function loadGrafico(){
+    var ctx = $("#grafico");
+    var data = [];
+    var myRadarChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+            labels: ["Ativos e Devices", "Comunicação e Conectividade", "Serviços Backend", "Padrões & Requerimentos regulatórios", "Ambiente de projeto"],
+            datasets: [{
+                label:"Projeto",
+                data: [1, 2, 3, 4, 1],
+                fill:true,
+                backgroundColor:rgba(255, 99, 132, 0.2),
+                borderColor:rgb(255, 99, 132),
+                pointBackgroundColor:rgb(255, 99, 132),
+                pointBorderColor:"#fff",
+                pointHoverBackgroundColor:"#fff",
+                pointHoverBorderColor:rgb(255, 99, 132)
+            }]
+        },
+        options: {
+            elements:{
+                line:{
+                    tension:0,
+                    borderWidth:3
+                }
+            }
+        }
+    });
+}
+
+function loadPadroesRequerimentos(result){
+    $('#requerimentosRegiao option[value="'+result.RequerimentosRegiao+'"]').attr('selected', 'selected')
+    $("#requerimentosRegiaoC").val(result.RequerimentosRegiaoC);
+    $('#requerimentosIndustria option[value="'+result.RequerimentosIndustria+'"]').attr('selected', 'selected')
+    $("#requerimentosIndustriaC").val(result.RequerimentosIndustriaC);
+    $('#requerimentosTecnologia option[value="'+result.RequerimentosTecnologia+'"]').attr('selected', 'selected')
+    $("#requerimentosTecnologiaC").val(result.RequerimentosTecnologiaC);
+    $('#padroesTecnicos option[value="'+result.PadroesTecnicos+'"]').attr('selected', 'selected')
+    $("#padroesTecnicosC").val(result.PadroesTecnicosC);
+    $('#padroesFuncionais option[value="'+result.PadroesFuncionais+'"]').attr('selected', 'selected')
+    $("#padroesFuncionaisC").val(result.PadroesFuncionaisC);
+}
+
+function loadServicosBackend(result){
+    $('#geralEstrategiaAplicacao option[value="'+result.geralEstrategiaAplicacao+'"]').attr('selected', 'selected')
+    $("#geralEstrategiaAplicacaoC").val(result.geralEstrategiaAplicacaoC);
+    $('#geralComplexidadeNegocio option[value="'+result.geralComplexidadeNegocio+'"]').attr('selected', 'selected')
+    $("#geralComplexidadeNegocioC").val(result.geralComplexidadeNegocioC);
+    $('#geralIntegracaoBackend option[value="'+result.geralIntegracaoBackend+'"]').attr('selected', 'selected')
+    $("#geralIntegracaoBackendC").val(result.geralIntegracaoBackendC);
+    $('#gestaoVolumeDados option[value="'+result.gestaoVolumeDados+'"]').attr('selected', 'selected')
+    $("#gestaoVolumeDadosC").val(result.gestaoVolumeDadosC);
+    $('#gestaoVariedadeDados option[value="'+result.gestaoVariedadeDados+'"]').attr('selected', 'selected')
+    $("#gestaoVariedadeDadosC").val(result.gestaoVariedadeDadosC);
+    $('#gestaoVariabilidadeDados option[value="'+result.gestaoVariabilidadeDados+'"]').attr('selected', 'selected')
+    $("#gestaoVariabilidadeDadosC").val(result.gestaoVariabilidadeDadosC);
+    $('#gestaoAnalytics option[value="'+result.gestaoAnalytics+'"]').attr('selected', 'selected')
+    $("#gestaoAnalyticsC").val(result.gestaoAnalyticsC);
 }
 
 function loadMasks(){

@@ -1,5 +1,4 @@
-﻿
-<div style="position: relative; height:100%;">
+﻿<div style="position: relative; height:100%;">
     <button type="button" class="button btnTrans btnBorder btnVoltar" id="voltarProjeto">
         <i class="fas fa-arrow-left"></i>&nbsp; Voltar
     </button>
@@ -122,7 +121,6 @@
         </div>
     </form>
 </div>
-
 <script type="text/javascript">
     "use strict";
     $(document).ready(function () {
@@ -140,37 +138,6 @@
         $(".salvar").off().click(function () {
             enviarPadroesRequerimentos();
         });
+        getAPIContent("padroes/"+getCookie("projetoid"), {},"loadPadroesRequerimentos");
     });
-
-    function enviarPadroesRequerimentos() {
-
-        var requerimentosRegiao = $("#requerimentosRegiao").val();
-        var requerimentosRegiaoC = $("#requerimentosRegiaoC").val();
-        var requerimentosIndustria = $("#requerimentosIndustria").val();
-        var requerimentosIndustriaC = $("#requerimentosIndustriaC").val();
-        var requerimentosTecnologia = $("#requerimentosTecnologia").val();
-        var requerimentosTecnologiaC = $("#requerimentosTecnologiaC").val();
-        var padroesTecnicos = $("#padroesTecnicos").val();
-        var padroesTecnicosC = $("#padroesTecnicosC").val();
-        var padroesFuncionais = $("#padroesFuncionais").val();
-        var padroesFuncionaisC = $("#padroesFuncionaisC").val();
-
-
-        var padroesRequerimentos = {
-            RequerimentosRegiao: requerimentosRegiao,
-            RequerimentosRegiaoC: requerimentosRegiaoC,
-            RequerimentosIndustria: requerimentosIndustria,
-            RequerimentosIndustriaC: requerimentosIndustriaC,
-            RequerimentosTecnologia: requerimentosTecnologia,
-            RequerimentosTecnologiaC: requerimentosTecnologiaC,
-            PadroesTecnicos: padroesTecnicos,
-            PadroesTecnicosC: padroesTecnicosC,
-            PadroesFuncionais: padroesFuncionais,
-            PadroesFuncionaisC: padroesFuncionaisC
-        };
-        console.log(padroesRequerimentos);
-        sendContent("", padroesRequerimentos, "Sucesso", "Track & Trace - Padrões e Requerimentos Gravado Com Sucesso!")
-    }
-
 </script>
-

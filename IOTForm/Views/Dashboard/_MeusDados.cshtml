@@ -196,24 +196,20 @@
 </div>
     <script type="text/javascript">
         "use strict";
-
         if (window.innerWidth < 769) {
             $(".wrapper-body").show();
         }
-
-        $(".btnMeusDados").click(function () {
-            $(".wrapper-body").hide();
-            $(this).closest(".wrapper").find(".wrapper-body").toggle();
-        });
-        $(".voltarDashboard").off().click(function () {
-            voltarDashboard();
-        });
         $(document).ready(function () {
+            $(".btnMeusDados").click(function () {
+                $(".wrapper-body").hide();
+                $(this).closest(".wrapper").find(".wrapper-body").toggle();
+            });
+            $(".voltarDashboard").off().click(function () {
+                voltarDashboard();
+            });
             var clienteid = getCookie("clienteid");
             getAPIContent("cliente/"+clienteid,{},loadCliente);
-
             loadMasks();
-
             $(".salvar").off().click(function () {
                 var razaoSocial = $("#razaoSocial").val();
                 var cnpj = $("#cnpj").val();
@@ -234,12 +230,10 @@
                 var cidade = $("#cidade").val();
                 var estado = $("#estado").val();
                 var cep = $("#cep").val();
-
                 if (novaSenha != confirmeNovaSenha) {
                     alert("Senhas não conferem");
                     return;
                 }
-                
                 var cliente = {
                     RazaoSocial: razaoSocial,
                     Cnpj: cnpj,

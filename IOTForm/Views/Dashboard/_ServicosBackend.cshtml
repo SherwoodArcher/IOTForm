@@ -1,5 +1,4 @@
-﻿
-<div style="position: relative; height:100%;">
+﻿<div style="position: relative; height:100%;">
     <button type="button" class="button btnTrans btnBorder btnVoltar" id="voltarProjeto">
         <i class="fas fa-arrow-left"></i>&nbsp; Voltar
     </button>
@@ -154,7 +153,6 @@
         </div>
     </form>
 </div>
-
 <script type="text/javascript">
     "use strict";
     $(document).ready(function () {
@@ -172,45 +170,6 @@
         $(".salvar").off().click(function () {
             enviarServicosBackend();
         });
+        getAPIContent("servicos/"+getCookie("projetoid"), {},"loadServicosBackend");
     });
-
-    function enviarServicosBackend() {
-
-        var geralEstrategiaAplicacao = $("#geralEstrategiaAplicacao").val();
-        var geralEstrategiaAplicacaoC = $("#geralEstrategiaAplicacaoC").val();
-        var geralComplexidadeNegocio = $("#geralComplexidadeNegocio").val();
-        var geralComplexidadeNegocioC = $("#geralComplexidadeNegocioC").val();
-        var geralIntegracaoBackend = $("#geralIntegracaoBackend").val();
-        var geralIntegracaoBackendC = $("#geralIntegracaoBackendC").val();
-        var gestaoVolumeDados = $("#gestaoVolumeDados").val();
-        var gestaoVolumeDadosC = $("#gestaoVolumeDadosC").val();
-        var gestaoVariedadeDados = $("#gestaoVariedadeDados").val();
-        var gestaoVariedadeDadosC = $("#gestaoVariedadeDadosC").val();
-        var gestaoVariabilidadeDados = $("#gestaoVariabilidadeDados").val();
-        var gestaoVariabilidadeDadosC = $("#gestaoVariabilidadeDadosC").val();
-        var gestaoAnalytics = $("#gestaoAnalytics").val();
-        var gestaoAnalyticsC = $("#gestaoAnalyticsC").val();
-
-
-        var servicosBackend = {
-            GeralEstrategiaAplicacao: geralEstrategiaAplicacao,
-            GeralEstrategiaAplicacaoC: geralEstrategiaAplicacaoC,
-            GeralComplexidadeNegocio: geralComplexidadeNegocio,
-            GeralComplexidadeNegocioC: geralComplexidadeNegocioC,
-            GeralIntegracaoBackend: geralIntegracaoBackend,
-            GeralIntegracaoBackendC: geralIntegracaoBackendC,
-            GestaoVolumeDados: gestaoVolumeDados,
-            GestaoVolumeDadosC: gestaoVolumeDadosC,
-            GestaoVariedadeDados: gestaoVariedadeDados,
-            GestaoVariedadeDadosC: gestaoVariedadeDadosC,	
-            GestaoVariabilidadeDados: gestaoVariabilidadeDados,
-            GestaoVariabilidadeDadosC: gestaoVariabilidadeDadosC,
-            GestaoAnalytics: gestaoAnalytics,
-            GestaoAnalyticsC: gestaoAnalyticsC
-        };
-        console.log(servicosBackend);
-        sendContent("", servicosBackend, "Sucesso", "Track & Trace - Serviços Backend Gravado Com Sucesso!")
-    }
-
 </script>
-
