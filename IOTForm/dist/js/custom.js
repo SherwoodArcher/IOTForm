@@ -446,42 +446,6 @@ function loadFormularioGeral(result){
     $("#respostatexto10").val(checkValue(result.RespostaTexto10));
 }
 
-function loadGrafico(result){
-    var ctx = $("#grafico");
-    var data  = [
-        result.AtivosDevice.Medias.Total,
-        result.ComunicacaoConectividade.Medias.Total,
-        result.ServicosBackend.Medias.Total,
-        result.PadroesRequerimento.Medias.Total,
-        result.AmbienteProjeto.Medias.Total
-    ];
-    var myRadarChart = new Chart(ctx, {
-        type: 'radar',
-        data: {
-            labels: ["Ativos", "Comunicação", "Backend", "Padrões", "Ambiente"],
-            datasets: [{
-                label:"Projeto",
-                data: data,
-                fill:true,
-                backgroundColor:"rgba(255, 99, 132, 0.2)",
-                borderColor:"rgb(255, 99, 132)",
-                pointBackgroundColor:"rgb(255, 99, 132)",
-                pointBorderColor:"#fff",
-                pointHoverBackgroundColor:"#fff",
-                pointHoverBorderColor:"rgb(255, 99, 132)"
-            }]
-        },
-        options: {
-            elements:{
-                line:{
-                    tension:0,
-                    borderWidth:3
-                }
-            }
-        }
-    });
-}
-
 function loadPadroesRequerimentos(result){
     $('#requerimentosRegiao option[value="'+result.RequerimentosRegiao+'"]').attr('selected', 'selected')
     $("#requerimentosRegiaoC").val(result.RequerimentosRegiaoC);
