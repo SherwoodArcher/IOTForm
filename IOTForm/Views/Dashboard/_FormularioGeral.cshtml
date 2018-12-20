@@ -274,5 +274,6 @@
         $(".salvar").off().click(function () {
             enviarFormularioGeral();
         });
+        getAPIContent("questionario/"+getCookie("projetoid"), {},"loadFormularioGeral");
     });
 </script>

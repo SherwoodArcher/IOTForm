@@ -142,8 +142,8 @@ function getAPIContent(url, data, callback) {
             url: "https://iotforms-api.azurewebsites.net/" + url,
             data: data,
             method: 'GET',
-            success: function (result) {
-                if(!isUndefined(result)){
+            success: function (result, txtStatus, status) {
+                if(status.status == 200){
                     callback(result);
                 }
             },
@@ -310,6 +310,30 @@ function loadCliente(result){
 function loadComunicacaoConectividade(result){
 
 }
+
+function loadFormularioGeral(result){
+    $("#resposta1").prop("checked",result.Resposta1);
+    $("#respostatexto1").val(checkValue(result.RespostaTexto2));
+    $("#resposta2").prop("checked",result.Resposta2);
+    $("#respostatexto2").val(checkValue(result.RespostaTexto2));
+    $("#resposta3").prop("checked",result.Resposta3);
+    $("#respostatexto3").val(checkValue(result.RespostaTexto3));
+    $("#resposta4").prop("checked",result.Resposta4);
+    $("#respostatexto4").val(checkValue(result.RespostaTexto4));
+    $("#resposta5").prop("checked",result.Resposta5);
+    $("#respostatexto5").val(checkValue(result.RespostaTexto5));
+    $("#resposta6").prop("checked",result.Resposta6);
+    $("#respostatexto6").val(checkValue(result.RespostaTexto6));
+    $("#resposta7").prop("checked",result.Resposta7);
+    $("#respostatexto7").val(checkValue(result.RespostaTexto7));
+    $("#resposta8").prop("checked",result.Resposta8);
+    $("#respostatexto8").val(checkValue(result.RespostaTexto8));
+    $("#resposta9").prop("checked",result.Resposta9);
+    $("#respostatexto9").val(checkValue(result.RespostaTexto9));
+    $("#resposta10").prop("checked",result.Resposta10);
+    $("#respostatexto10").val(checkValue(result.RespostaTexto10));
+}
+
 function loadMasks(){
     $("#cnpj").mask("00.000.000/0000-00", { reverse: true });
     $("#telCel").mask("(00) 00000-0000");
